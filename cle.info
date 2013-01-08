@@ -1,0 +1,154 @@
+; Packaging information for cle
+name = "Collaborative learning environment"
+description = "Create a space for students to interact via submission of rich media"
+exclusive = "1"
+core = "7.x"
+; ----------
+; Dependencies
+; ----------
+; Administration
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+; Chaos tool suite
+dependencies[] = ctools
+; Context
+dependencies[] = context
+dependencies[] = context_ui
+; Core
+dependencies[] = block
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = overlay
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = update
+dependencies[] = user
+; Input filters
+dependencies[] = typogrify
+dependencies[] = video_filter
+; Media
+dependencies[] = imce
+; Other
+dependencies[] = module_filter
+dependencies[] = strongarm
+dependencies[] = transliteration
+; Textbook
+dependencies[] = textbook
+dependencies[] = textbook_editor
+; User interface
+dependencies[] = ckeditor_link
+dependencies[] = imce_wysiwyg
+dependencies[] = wysiwyg
+; Views
+dependencies[] = views
+dependencies[] = views_infinite_scroll
+dependencies[] = views_ui
+; Features
+dependencies[] = features
+
+; ----------
+; Variables
+; ----------
+variables[admin_theme] = 'seven'
+variables[ckeditor_link_autocomplete_menus][- any -] = '- any -'
+variables[ckeditor_link_autocomplete_menus][devel] = 0
+variables[ckeditor_link_autocomplete_menus][features] = 0
+variables[ckeditor_link_autocomplete_menus][main-menu] = 0
+variables[ckeditor_link_autocomplete_menus][management] = 0
+variables[ckeditor_link_autocomplete_menus][navigation] = 0
+variables[ckeditor_link_autocomplete_menus][user-menu] = 0
+variables[ckeditor_link_autocomplete_node_types][- any -] = '- any -'
+variables[ckeditor_link_autocomplete_node_types][certificate] = 0
+variables[ckeditor_link_autocomplete_node_types][page] = 0
+variables[ckeditor_link_autocomplete_vocabularies][- any -] = '- any -'
+variables[ckeditor_link_autocomplete_vocabularies][1] = 0
+variables[ckeditor_link_type_name] = 'Internal link'
+variables[dashboard_stashed_blocks][0][module] = 'node'
+variables[dashboard_stashed_blocks][0][delta] = 'recent'
+variables[dashboard_stashed_blocks][0][region] = 'dashboard_main'
+variables[dashboard_stashed_blocks][1][module] = 'user'
+variables[dashboard_stashed_blocks][1][delta] = 'new'
+variables[dashboard_stashed_blocks][1][region] = 'dashboard_sidebar'
+variables[dashboard_stashed_blocks][2][module] = 'search'
+variables[dashboard_stashed_blocks][2][delta] = 'form'
+variables[dashboard_stashed_blocks][2][region] = 'dashboard_sidebar'
+variables[dashboard_stashed_blocks][3][module] = 'comment'
+variables[dashboard_stashed_blocks][3][delta] = 'recent'
+variables[dashboard_stashed_blocks][3][region] = 'dashboard_inactive'
+variables[dashboard_stashed_blocks][4][module] = 'user'
+variables[dashboard_stashed_blocks][4][delta] = 'online'
+variables[dashboard_stashed_blocks][4][region] = 'dashboard_inactive'
+variables[date_default_timezone] = 'America/New_York'
+variables[filter_fallback_format] = 'plain_text'
+variables[imce_profiles][1][name] = 'User-1'
+variables[imce_profiles][1][usertab] = 1
+variables[imce_profiles][1][filesize] = 0
+variables[imce_profiles][1][quota] = 0
+variables[imce_profiles][1][tuquota] = 0
+variables[imce_profiles][1][extensions] = '*'
+variables[imce_profiles][1][dimensions] = '1200x1200'
+variables[imce_profiles][1][filenum] = 0
+variables[imce_profiles][1][directories][0][name] = '.'
+variables[imce_profiles][1][directories][0][subnav] = 1
+variables[imce_profiles][1][directories][0][browse] = 1
+variables[imce_profiles][1][directories][0][upload] = 1
+variables[imce_profiles][1][directories][0][thumb] = 1
+variables[imce_profiles][1][directories][0][delete] = 1
+variables[imce_profiles][1][directories][0][resize] = 1
+variables[imce_profiles][1][thumbnails][0][name] = 'Small'
+variables[imce_profiles][1][thumbnails][0][dimensions] = '90x90'
+variables[imce_profiles][1][thumbnails][0][prefix] = 'small_'
+variables[imce_profiles][1][thumbnails][0][suffix] = ''
+variables[imce_profiles][1][thumbnails][1][name] = 'Medium'
+variables[imce_profiles][1][thumbnails][1][dimensions] = '120x120'
+variables[imce_profiles][1][thumbnails][1][prefix] = 'medium_'
+variables[imce_profiles][1][thumbnails][1][suffix] = ''
+variables[imce_profiles][1][thumbnails][2][name] = 'Large'
+variables[imce_profiles][1][thumbnails][2][dimensions] = '180x180'
+variables[imce_profiles][1][thumbnails][2][prefix] = 'large_'
+variables[imce_profiles][1][thumbnails][2][suffix] = ''
+variables[imce_profiles][2][name] = 'Sample profile'
+variables[imce_profiles][2][usertab] = 1
+variables[imce_profiles][2][filesize] = 1
+variables[imce_profiles][2][quota] = 2
+variables[imce_profiles][2][tuquota] = 0
+variables[imce_profiles][2][extensions] = 'gif png jpg jpeg'
+variables[imce_profiles][2][dimensions] = '800x600'
+variables[imce_profiles][2][filenum] = 1
+variables[imce_profiles][2][directories][0][name] = 'u%uid'
+variables[imce_profiles][2][directories][0][subnav] = 0
+variables[imce_profiles][2][directories][0][browse] = 1
+variables[imce_profiles][2][directories][0][upload] = 1
+variables[imce_profiles][2][directories][0][thumb] = 1
+variables[imce_profiles][2][directories][0][delete] = 0
+variables[imce_profiles][2][directories][0][resize] = 0
+variables[imce_profiles][2][thumbnails][0][name] = 'Thumb'
+variables[imce_profiles][2][thumbnails][0][dimensions] = '90x90'
+variables[imce_profiles][2][thumbnails][0][prefix] = 'thumb_'
+variables[imce_profiles][2][thumbnails][0][suffix] = ''
+variables[node_admin_theme] = '1'
+variables[node_options_page][0] = 'status'
+variables[theme_default] = 'bartik'
+variables[user_pictures] = '1'
+variables[user_picture_dimensions] = '1024x1024'
+variables[user_picture_file_size] = '800'
+variables[user_picture_style] = 'thumbnail'
+variables[user_register] = 2
+
