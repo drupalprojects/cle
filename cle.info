@@ -14,6 +14,12 @@ dependencies[] = ctools
 ; Context
 dependencies[] = context
 dependencies[] = context_ui
+; CIS
+dependencies[] = cis_connector
+dependencies[] = cis_connector_profile2
+; Other
+dependencies[] = token
+dependencies[] = boxes
 ; Core
 dependencies[] = block
 dependencies[] = color
@@ -49,6 +55,7 @@ dependencies[] = imce
 dependencies[] = module_filter
 dependencies[] = strongarm
 dependencies[] = transliteration
+dependencies[] = pathauto
 ; Textbook
 dependencies[] = textbook
 dependencies[] = textbook_editor
