@@ -11,6 +11,12 @@ projects[admin_menu][subdir] = "contrib"
 projects[ctools][version] = "1.2"
 projects[ctools][subdir] = "contrib"
 
+projects[boxes][version] = "1.0"
+projects[boxes][subdir] = "contrib"
+
+projects[token][version] = "1.4"
+projects[token][subdir] = "contrib"
+
 projects[context][version] = "3.0-beta6"
 projects[context][subdir] = "contrib"
 
@@ -29,6 +35,9 @@ projects[video_filter][subdir] = "contrib"
 projects[imce][version] = "1.6"
 projects[imce][subdir] = "contrib"
 
+projects[cis_connector][version] = "1.x-dev"
+projects[cis_connector][subdir] = "contrib"
+
 projects[module_filter][version] = "1.7"
 projects[module_filter][subdir] = "contrib"
 
@@ -37,6 +46,9 @@ projects[strongarm][subdir] = "contrib"
 
 projects[libraries][version] = "2.0"
 projects[libraries][subdir] = "contrib"
+
+projects[pathauto][version] = "1.2"
+projects[pathauto][subdir] = "contrib"
 
 projects[masquerade][version] = "1.0-rc5"
 projects[masquerade][subdir] = "contrib"
