@@ -5,17 +5,14 @@ api = "2"
 ; projects[drupal][version] = "7.x"
 
 ; Modules
-projects[admin_menu][version] = "3.0-rc3"
+projects[admin_menu][version] = "3.0-rc4"
 projects[admin_menu][subdir] = "contrib"
+
+projects[cis_connector][version] = "1.x-dev"
+projects[cis_connector][subdir] = "contrib"
 
 projects[ctools][version] = "1.2"
 projects[ctools][subdir] = "contrib"
-
-projects[boxes][version] = "1.0"
-projects[boxes][subdir] = "contrib"
-
-projects[token][version] = "1.4"
-projects[token][subdir] = "contrib"
 
 projects[context][version] = "3.0-beta6"
 projects[context][subdir] = "contrib"
@@ -32,26 +29,32 @@ projects[typogrify][subdir] = "contrib"
 projects[video_filter][version] = "3.1"
 projects[video_filter][subdir] = "contrib"
 
-projects[imce][version] = "1.6"
+projects[lti_tool_provider][version] = "1.x-dev"
+projects[lti_tool_provider][subdir] = "contrib"
+
+projects[imce][version] = "1.7"
 projects[imce][subdir] = "contrib"
 
-projects[cis_connector][version] = "1.x-dev"
-projects[cis_connector][subdir] = "contrib"
+projects[boxes][version] = "1.1"
+projects[boxes][subdir] = "contrib"
 
-projects[module_filter][version] = "1.7"
-projects[module_filter][subdir] = "contrib"
-
-projects[strongarm][version] = "2.0"
-projects[strongarm][subdir] = "contrib"
+projects[entity][version] = "1.0"
+projects[entity][subdir] = "contrib"
 
 projects[libraries][version] = "2.0"
 projects[libraries][subdir] = "contrib"
 
-projects[pathauto][version] = "1.2"
-projects[pathauto][subdir] = "contrib"
+projects[module_filter][version] = "1.7"
+projects[module_filter][subdir] = "contrib"
 
-projects[masquerade][version] = "1.0-rc5"
-projects[masquerade][subdir] = "contrib"
+projects[profile2][version] = "1.3"
+projects[profile2][subdir] = "contrib"
+
+projects[strongarm][version] = "2.0"
+projects[strongarm][subdir] = "contrib"
+
+projects[token][version] = "1.4"
+projects[token][subdir] = "contrib"
 
 projects[transliteration][version] = "3.1"
 projects[transliteration][subdir] = "contrib"
@@ -59,23 +62,23 @@ projects[transliteration][subdir] = "contrib"
 projects[textbook][version] = "1.0-rc2"
 projects[textbook][subdir] = "contrib"
 
-projects[ckeditor_link][version] = "2.2"
+projects[uuid][version] = "1.x-dev"
+projects[uuid][subdir] = "contrib"
+
+projects[ckeditor_link][version] = "2.3"
 projects[ckeditor_link][subdir] = "contrib"
 
 projects[imce_wysiwyg][version] = "1.0"
 projects[imce_wysiwyg][subdir] = "contrib"
+
+projects[masonry][version] = "1.1"
+projects[masonry][subdir] = "contrib"
 
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
 projects[views][version] = "3.5"
 projects[views][subdir] = "contrib"
-
-projects[delta][version] = "3.0-beta11"
-projects[delta][subdir] = "contrib"
-
-projects[omega_tools][version] = "3.0-rc4"
-projects[omega_tools][subdir] = "contrib"
 
 projects[views_infinite_scroll][version] = "1.1"
 projects[views_infinite_scroll][subdir] = "contrib"
@@ -126,3 +129,7 @@ libraries[profiler][type] = "library"
 libraries[profiler][destination] = "libraries"
 libraries[profiler][download][type] = "get"
 libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.x-dev.tar.gz"
+
+; Patches
+projects[views_infinite_scroll][patch][] = "http://drupal.org/files/views_infinite_scroll-1806628-13.patch"
+projects[lti_tool_provider][patch][] = "http://drupal.org/files/lti_tool_provider-profile2-support.patch"
