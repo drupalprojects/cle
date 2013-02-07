@@ -17,7 +17,7 @@ projects[ctools][subdir] = "contrib"
 projects[context][version] = "3.0-beta6"
 projects[context][subdir] = "contrib"
 
-projects[profiler_builder][version] = "1.0-rc2"
+projects[profiler_builder][version] = "1.0-rc3"
 projects[profiler_builder][subdir] = "contrib"
 
 projects[features][version] = "1.0"
