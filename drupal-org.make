@@ -29,6 +29,9 @@ projects[typogrify][subdir] = "contrib"
 projects[video_filter][version] = "3.1"
 projects[video_filter][subdir] = "contrib"
 
+projects[video_embed_field][version] = "2.0-beta5"
+projects[video_embed_field][subdir] = "contrib"
+
 projects[lti_tool_provider][version] = "1.x-dev"
 projects[lti_tool_provider][subdir] = "contrib"
 

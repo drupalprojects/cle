@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the CLE Submission feature.
+ */
+
+include_once 'cle_submission.features.inc';

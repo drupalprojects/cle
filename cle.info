@@ -51,6 +51,7 @@ dependencies[] = typogrify
 dependencies[] = video_filter
 ; Media
 dependencies[] = imce
+dependencies[] = video_embed_field
 ; Other
 dependencies[] = module_filter
 dependencies[] = strongarm
@@ -58,7 +59,6 @@ dependencies[] = transliteration
 dependencies[] = pathauto
 ; Textbook
 dependencies[] = textbook
-dependencies[] = textbook_editor
 ; User interface
 dependencies[] = ckeditor_link
 dependencies[] = imce_wysiwyg
@@ -69,6 +69,8 @@ dependencies[] = views_infinite_scroll
 dependencies[] = views_ui
 ; Features
 dependencies[] = features
+dependencies[] = cle_submission
+dependencies[] = textbook_editor
 
 ; ----------
 ; Variables
