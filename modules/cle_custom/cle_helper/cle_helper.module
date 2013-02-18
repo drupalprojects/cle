@@ -1,0 +1,19 @@
+<?php
+define('CLE_HELPER_GROUP_BUNDLE', 'section');
+/**
+ * @file
+ * Code for the CLE distribution.
+ */
+
+/**
+ * Implements hook_init().
+ */
+function cle_helper_init() {
+  // placeholder during debug
+}
+
+/**
+ * Implements hook_lti_tool_provider_launch_alter().
+ */
+function cle_helper_lti_tool_provider_launch_alter(&$launch_info, $account) {
+}
