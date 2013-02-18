@@ -30,7 +30,7 @@ function cle_submission_default_video_embed_styles() {
     'vimeo' => array(
       'width' => '711',
       'height' => '400',
-      'color' => 'c9ff23',
+      'color' => 'ff9933',
       'portrait' => 0,
       'title' => 1,
       'byline' => 1,
@@ -61,7 +61,7 @@ function cle_submission_default_video_embed_styles() {
     'vimeo' => array(
       'width' => '266',
       'height' => '150',
-      'color' => 'c9ff23',
+      'color' => 'ff9933',
       'portrait' => 0,
       'title' => 1,
       'byline' => 1,
