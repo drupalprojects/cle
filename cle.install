@@ -9,8 +9,8 @@
  */
 function cle_install() {
   // Enable some cle blocks.
-  $default_theme = 'bartik';
-  $admin_theme = 'seven';
+  $default_theme = 'respond';
+  $admin_theme = 'rubik';
   // disable all themes
   db_update('system')
     ->fields(array('status' => 0))
@@ -85,8 +85,11 @@ function cle_install() {
   
   // revert features to ensure they are all installed
   $features = array(
+    'textbook_editor',
+    'cis_connector_profile2',
+    'cis_service_roles',
     'cle_submission',
-		'textbook_editor',
+    'cle_section',
   );
   features_revert($features);// Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();

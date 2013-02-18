@@ -1,7 +1,7 @@
 ; Collaborative learning environment make file
 core = "7.x"
 api = "2"
-; comment this in to use in local development
+; comment this out in to use on drupal.org
 ; projects[drupal][version] = "7.x"
 
 ; Modules
@@ -17,11 +17,20 @@ projects[ctools][subdir] = "contrib"
 projects[context][version] = "3.0-beta6"
 projects[context][subdir] = "contrib"
 
+projects[devel][version] = "1.3"
+projects[devel][subdir] = "contrib"
+
 projects[profiler_builder][version] = "1.0-rc3"
 projects[profiler_builder][subdir] = "contrib"
 
-projects[features][version] = "1.0"
+projects[features][version] = "2.0-beta1"
 projects[features][subdir] = "contrib"
+
+projects[entityreference][version] = "1.0"
+projects[entityreference][subdir] = "contrib"
+
+projects[field_hidden][version] = "1.3"
+projects[field_hidden][subdir] = "contrib"
 
 projects[typogrify][version] = "1.0-rc5"
 projects[typogrify][subdir] = "contrib"
@@ -29,14 +38,17 @@ projects[typogrify][subdir] = "contrib"
 projects[video_filter][version] = "3.1"
 projects[video_filter][subdir] = "contrib"
 
-projects[video_embed_field][version] = "2.0-beta5"
-projects[video_embed_field][subdir] = "contrib"
-
 projects[lti_tool_provider][version] = "1.x-dev"
 projects[lti_tool_provider][subdir] = "contrib"
 
 projects[imce][version] = "1.7"
 projects[imce][subdir] = "contrib"
+
+projects[video_embed_field][version] = "2.0-beta5"
+projects[video_embed_field][subdir] = "contrib"
+
+projects[og][version] = "2.0-rc4"
+projects[og][subdir] = "contrib"
 
 projects[boxes][version] = "1.1"
 projects[boxes][subdir] = "contrib"
@@ -74,6 +86,9 @@ projects[ckeditor_link][subdir] = "contrib"
 projects[imce_wysiwyg][version] = "1.0"
 projects[imce_wysiwyg][subdir] = "contrib"
 
+projects[jquery_update][version] = "2.3"
+projects[jquery_update][subdir] = "contrib"
+
 projects[masonry][version] = "1.1"
 projects[masonry][subdir] = "contrib"
 
@@ -83,10 +98,21 @@ projects[wysiwyg][subdir] = "contrib"
 projects[views][version] = "3.5"
 projects[views][subdir] = "contrib"
 
+projects[views_autocomplete_filters][version] = "1.0-beta2"
+projects[views_autocomplete_filters][subdir] = "contrib"
+
+projects[views_bulk_operations][version] = "3.0"
+projects[views_bulk_operations][subdir] = "contrib"
+
 projects[views_infinite_scroll][version] = "1.1"
 projects[views_infinite_scroll][subdir] = "contrib"
 
+
 ; Themes
+; respond
+projects[respond][type] = "theme"
+projects[respond][version] = "3.0-beta1"
+projects[respond][subdir] = "contrib"
 ; chamfer
 projects[chamfer][type] = "theme"
 projects[chamfer][version] = "1.x-dev"
@@ -120,12 +146,6 @@ libraries[colorpicker][type] = "library"
 libraries[colorpicker][destination] = "libraries"
 libraries[colorpicker][download][type] = "get"
 libraries[colorpicker][download][url] = "http://www.eyecon.ro/colorpicker/colorpicker.zip"
-
-libraries[flexslider][directory_name] = "flexslider"
-libraries[flexslider][type] = "library"
-libraries[flexslider][destination] = "libraries"
-libraries[flexslider][download][type] = "get"
-libraries[flexslider][download][url] = "https://github.com/downloads/woothemes/FlexSlider/FlexSlider-1.8.zip"
 
 libraries[profiler][directory_name] = "profiler"
 libraries[profiler][type] = "library"
