@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the CLE Section feature.
+ */
+
+include_once 'cle_section.features.inc';
