@@ -5,3 +5,33 @@
  */
 
 include_once 'cle_section.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function cle_section_init() {
+  // placeholder during debug
+  drupal_add_css(drupal_get_path('module', 'cle_section') . '/cle_section.css');
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function cle_section_form_alter(&$form, &$form_state, $form_id) {
+  // if only part of one group select it automatically
+  if (arg(0) == 'node' && arg(2) != 'edit' && ($form_id == 'cle_assignment_node_form' || $form_id == 'cle_submission_node_form')) {
+    // if only 1 group, set to that value
+    if(count($form['og_group_ref']['und'][0]['default']['#options']) == 2) {
+      // flip around to get key associations
+      $tmp = array_keys($form['og_group_ref']['und'][0]['default']['#options']);
+      // array 0 is always '_none' so take the only other option
+      $form['og_group_ref']['und'][0]['default']['#default_value'] = $tmp[1];
+    }
+  }
+  // reset these group specific values if a group reference exists
+  if (isset($form['og_group_ref']['und'][0])) {
+    // this allows us to avoid having to use string_overrides module
+    $form['og_group_ref']['und'][0]['default']['#title'] = t('Your Section');
+    $form['og_group_ref']['und'][0]['default']['#description'] = t('Associate your submission with your course section.');
+  }
+}

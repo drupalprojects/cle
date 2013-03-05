@@ -10,6 +10,7 @@ define('CLE_HELPER_GROUP_BUNDLE', 'section');
  */
 function cle_helper_init() {
   // placeholder during debug
+  drupal_add_css(drupal_get_path('module', 'cle_helper') . '/cle_helper.css');
 }
 
 /**
