@@ -32,7 +32,7 @@ projects[entityreference][subdir] = "contrib"
 projects[field_hidden][version] = "1.3"
 projects[field_hidden][subdir] = "contrib"
 
-projects[typogrify][version] = "1.0-rc5"
+projects[typogrify][version] = "1.0-rc6"
 projects[typogrify][subdir] = "contrib"
 
 projects[video_filter][version] = "3.1"
@@ -47,7 +47,7 @@ projects[imce][subdir] = "contrib"
 projects[video_embed_field][version] = "2.0-beta5"
 projects[video_embed_field][subdir] = "contrib"
 
-projects[og][version] = "2.0-rc4"
+projects[og][version] = "2.0"
 projects[og][subdir] = "contrib"
 
 projects[boxes][version] = "1.1"
@@ -68,7 +68,7 @@ projects[profile2][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
 
-projects[token][version] = "1.4"
+projects[token][version] = "1.5"
 projects[token][subdir] = "contrib"
 
 projects[transliteration][version] = "3.1"
@@ -101,7 +101,7 @@ projects[views][subdir] = "contrib"
 projects[views_autocomplete_filters][version] = "1.0-beta2"
 projects[views_autocomplete_filters][subdir] = "contrib"
 
-projects[views_bulk_operations][version] = "3.0"
+projects[views_bulk_operations][version] = "3.1"
 projects[views_bulk_operations][subdir] = "contrib"
 
 projects[views_infinite_scroll][version] = "1.1"
