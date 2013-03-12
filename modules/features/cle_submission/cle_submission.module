@@ -5,3 +5,29 @@
  */
 
 include_once 'cle_submission.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function cle_submission_init() {
+	$file = FALSE;
+	$path = drupal_get_path('module', 'cle_submission') .'/';
+	// add special js handling to the submissions overview
+	switch(arg(0)) {
+		case 'submissions':
+		  $file = 'submission_overview';
+		break;
+	  default:
+			switch(arg(2)) {
+				case 'assignments':
+					$file = 'assignment_listing';
+				break;
+			}
+		break;
+	}
+	// add files if on a special path
+	if ($file) {
+		drupal_add_js($path . 'js/' . $file . '.js');
+	  drupal_add_css($path . 'css/' . $file . '.css');
+	}
+}

@@ -23,15 +23,32 @@
  *
  * @ingroup views_templates
  */
+ // account for radioactivity
+ $opacity_style = '';
+ if (!empty($row->_field_data['nid']['entity']->field_energy)) {
+	 $energy = $row->_field_data['nid']['entity']->field_energy['und'][0]['radioactivity_energy']; 
+	 if ($energy > 0) {
+		$opacity = 1 - ((100 - $energy) / 100);
+		if ($opacity < .2) {
+			$opacity = .2;
+		}
+		$opacity_style = ' style="opacity:' . $opacity .'"';
+	 }
+ }
+ // pull background style
+ $item_style = 'background-color:#' . $row->field_field_color[0]['rendered']['#markup'];
+ // generate hover-container info
+ print '<a'. $opacity_style .' href="node/'. $row->_field_data['nid']['entity']->nid .'" class="cle-tile-wrapper" id="cle-node-' . $row->_field_data['nid']['entity']->nid . '">';
 ?>
-<?php foreach ($fields as $id => $field): ?>
-<?php $item_class = 'cle-tile-' . (1 + ($row->_field_data['nid']['entity']->created % 8)); ?>
-  <?php if (!empty($field->separator)): ?>
+<?php foreach ($fields as $id => $field):
+ if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>
   <?php endif; ?>
-
-  <?php print $field->wrapper_prefix; ?>
-    <?php print $field->label_html; ?>
-    <?php print '<div class="' . $item_class . '">' . $field->content . '</div>'; ?>
-  <?php print $field->wrapper_suffix; ?>
+  <?php
+		print $field->wrapper_prefix;
+		print $field->label_html;
+    print '<div style="' . $item_style . '">' . $field->content . '</div>';
+	  print $field->wrapper_suffix;
+	?>
 <?php endforeach; ?>
+<?php print '</a>';
