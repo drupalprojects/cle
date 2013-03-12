@@ -16,4 +16,4 @@ settings[toggle_search] = 1
 settings[cdn_bootstrap] = 0
 settings[cdn_jquery] = 0
 
-stylesheets[all][]   = cle_styles.css
+stylesheets[all][]   = css/cle_styles.css
