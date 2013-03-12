@@ -11,6 +11,7 @@ dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 ; CIS
 dependencies[] = cis_connector
+dependencies[] = cis_connector_profile2
 ; CLE
 dependencies[] = cle_helper
 ; Chaos tool suite
@@ -46,32 +47,68 @@ dependencies[] = update
 dependencies[] = user
 ; Fields
 dependencies[] = entityreference
-dependencies[] = field_hidden
+dependencies[] = entityreference_prepopulate
+; Flex Slider
+dependencies[] = flexslider
+dependencies[] = flexslider_fields
+; Image
+dependencies[] = smartcrop
 ; Input filters
 dependencies[] = typogrify
 dependencies[] = video_filter
+; Jammer
+dependencies[] = jammer
+dependencies[] = jammer_feed
+dependencies[] = jammer_feed_icon
 ; Learning Tools Interoperability
 dependencies[] = lti_tool_provider
 dependencies[] = lti_tool_provider_og
 ; Media
 dependencies[] = imce
 dependencies[] = video_embed_field
+; Node form columns
+dependencies[] = nodeformcols
 ; Organic groups
 dependencies[] = og
 dependencies[] = og_access
+dependencies[] = og_clone
 dependencies[] = og_context
 dependencies[] = og_ui
 ; Other
+dependencies[] = better_formats
 dependencies[] = boxes
+dependencies[] = clone
+dependencies[] = diff
 dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = fitvids
+dependencies[] = imagefield_crop
+dependencies[] = jquery_colorpicker
 dependencies[] = libraries
+dependencies[] = masquerade
 dependencies[] = module_filter
 dependencies[] = profile2
 dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = transliteration
+dependencies[] = unique_field
+; Performance and scalability
+dependencies[] = entitycache
+; Radioactivity
+dependencies[] = radioactivity
+dependencies[] = radioactivitydefaults
+; Regions
+dependencies[] = regions
+dependencies[] = regions_admin_left
+; Rules
+dependencies[] = rules
+dependencies[] = rules_admin
+dependencies[] = voting_rules
 ; Textbook
 dependencies[] = textbook
+dependencies[] = textbook_editor
+; Theme Tools
+dependencies[] = delta_blocks
 ; UUID
 dependencies[] = uuid
 ; User interface
@@ -87,13 +124,20 @@ dependencies[] = views_autocomplete_filters
 dependencies[] = views_bulk_operations
 dependencies[] = views_infinite_scroll
 dependencies[] = views_ui
+; Voting
+dependencies[] = rate
+dependencies[] = rate_slider
+dependencies[] = votingapi
 ; Features
 dependencies[] = features
 dependencies[] = textbook_editor
 dependencies[] = cis_connector_profile2
 dependencies[] = cis_service_roles
-dependencies[] = cle_submission
 dependencies[] = cle_section
+dependencies[] = cle_assignment
+dependencies[] = cle_submission
+dependencies[] = cle_perms
+
 ; ----------
 ; Variables
 ; ----------

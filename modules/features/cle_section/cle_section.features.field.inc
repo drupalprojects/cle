@@ -47,11 +47,11 @@ function cle_section_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 1,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -119,11 +119,10 @@ function cle_section_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'list',
+          'label' => 'inline',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 2,
+          'type' => 'hidden',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -134,7 +133,7 @@ function cle_section_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'group_access',
-      'label' => 'Group visibility',
+      'label' => 'Section',
       'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -201,7 +200,7 @@ function cle_section_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '0',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -247,7 +246,7 @@ function cle_section_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Determine if this is an OG group.');
   t('Group');
-  t('Group visibility');
+  t('Section');
   t('Section id');
 
   return $fields;

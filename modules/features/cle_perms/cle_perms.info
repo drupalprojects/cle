@@ -1,0 +1,16 @@
+name = CLE Perms
+description = General permissions that go beyond those granted by the default CIS base layer
+core = 7.x
+package = CLE
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = masquerade
+dependencies[] = node
+dependencies[] = overlay
+dependencies[] = rate
+features[features_api][] = api:1
+features[user_permission][] = access overlay
+features[user_permission][] = bypass node access
+features[user_permission][] = masquerade as user
+features[user_permission][] = use text format student_work
+features[user_permission][] = view rate results page

@@ -10,6 +10,93 @@
 function cle_submission_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'comment-comment_node_cle_submission-comment_body'.
+  $fields['comment-comment_node_cle_submission-comment_body'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(
+        0 => 'comment',
+      ),
+      'field_name' => 'comment_body',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'comment_node_cle_submission',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'comment',
+      'field_name' => 'comment_body',
+      'label' => 'Comment',
+      'required' => 1,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'plain_text' => 0,
+            'student_work' => 'student_work',
+            'textbook_editor' => 0,
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'student_work' => array(
+                'weight' => '0',
+              ),
+              'textbook_editor' => array(
+                'weight' => '-10',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '1',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '5',
+        ),
+        'type' => 'text_textarea',
+        'weight' => 0,
+      ),
+    ),
+  );
+
   // Exported field: 'node-cle_submission-body'.
   $fields['node-cle_submission-body'] = array(
     'field_config' => array(
@@ -35,7 +122,9 @@ function cle_submission_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_with_summary',
     ),
@@ -50,7 +139,7 @@ function cle_submission_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -65,20 +154,189 @@ function cle_submission_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'body',
       'label' => 'Body',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
-        'display_summary' => TRUE,
-        'text_processing' => 1,
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'plain_text' => 0,
+            'student_work' => 'student_work',
+            'textbook_editor' => 0,
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'student_work' => array(
+                'weight' => '0',
+              ),
+              'textbook_editor' => array(
+                'weight' => '-10',
+              ),
+            ),
+          ),
+        ),
+        'display_summary' => 1,
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => 20,
+          'rows' => '20',
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '-4',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-cle_submission-field_assignment'.
+  $fields['node-cle_submission-field_assignment'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_assignment',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 1,
+            ),
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'cle_assignment' => 'cle_assignment',
+          ),
+        ),
+        'profile2_private' => FALSE,
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'cle_submission',
+      'default_value' => NULL,
+      'default_value_function' => 'entityreference_prepopulate_field_default_value',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'inline',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => 1,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => '0',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_assignment',
+      'label' => 'Assignment',
+      'required' => 0,
+      'settings' => array(
+        'behaviors' => array(
+          'prepopulate' => array(
+            'action' => 'none',
+            'action_on_edit' => 0,
+            'fallback' => 'none',
+            'og_context' => 0,
+            'skip_perm' => '0',
+            'status' => 1,
+          ),
+        ),
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '2',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-cle_submission-field_energy'.
+  $fields['node-cle_submission-field_energy'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_energy',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'energy' => array(
+          0 => 'radioactivity_energy',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'radioactivity',
+      'settings' => array(
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'radioactivity',
+    ),
+    'field_instance' => array(
+      'bundle' => 'cle_submission',
+      'default_value' => array(
+        0 => array(
+          'radioactivity_energy' => '100',
+          'radioactivity_timestamp' => '1363026125',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_energy',
+      'label' => 'Energy',
+      'required' => FALSE,
+      'settings' => array(
+        'profile' => 'cle_half_week',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'radioactivity',
+        'settings' => array(),
+        'type' => 'radioactivity_basic_widget',
+        'weight' => '6',
       ),
     ),
   );
@@ -121,13 +379,13 @@ function cle_submission_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'image',
+          'module' => 'flexslider_fields',
           'settings' => array(
-            'image_link' => 'file',
-            'image_style' => 'medium',
+            'flexslider_optionset' => 'cle_submission',
+            'flexslider_reference_img_src' => NULL,
           ),
-          'type' => 'image',
-          'weight' => '1',
+          'type' => 'flexslider',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -155,11 +413,11 @@ function cle_submission_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'medium',
+          'preview_image_style' => 'cle_square',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '-3',
+        'weight' => '5',
       ),
     ),
   );
@@ -218,7 +476,7 @@ function cle_submission_field_default_fields() {
         'module' => 'video_embed_field',
         'settings' => array(),
         'type' => 'video_embed_field_video',
-        'weight' => '-2',
+        'weight' => '4',
       ),
     ),
   );
@@ -276,15 +534,15 @@ function cle_submission_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'cle_submission',
       'default_value' => NULL,
+      'default_value_function' => 'entityreference_prepopulate_field_default_value',
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'og_ui',
+          'label' => 'hidden',
           'settings' => array(),
-          'type' => 'og_list_default',
-          'weight' => 3,
+          'type' => 'hidden',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -295,7 +553,7 @@ function cle_submission_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'og_group_ref',
-      'label' => 'Groups audience',
+      'label' => 'Section',
       'required' => 1,
       'settings' => array(
         'behaviors' => array(
@@ -307,6 +565,14 @@ function cle_submission_field_default_fields() {
               'widget_type' => 'options_select',
             ),
             'status' => TRUE,
+          ),
+          'prepopulate' => array(
+            'action' => 'hide',
+            'action_on_edit' => 1,
+            'fallback' => 'none',
+            'og_context' => 1,
+            'skip_perm' => '0',
+            'status' => 1,
           ),
         ),
         'user_register_form' => FALSE,
@@ -328,16 +594,19 @@ function cle_submission_field_default_fields() {
         'module' => 'og',
         'settings' => array(),
         'type' => 'og_complex',
-        'weight' => -1,
+        'weight' => 0,
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Assignment');
   t('Body');
-  t('Groups audience');
+  t('Comment');
+  t('Energy');
   t('Images');
+  t('Section');
   t('Video');
 
   return $fields;

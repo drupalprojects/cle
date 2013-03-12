@@ -88,8 +88,10 @@ function cle_install() {
     'textbook_editor',
     'cis_connector_profile2',
     'cis_service_roles',
-    'cle_submission',
     'cle_section',
+    'cle_assignment',
+    'cle_submission',
+    'cle_perms',
   );
   features_revert($features);// Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
