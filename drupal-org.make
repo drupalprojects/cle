@@ -217,7 +217,7 @@ libraries[profiler][download][type] = "get"
 libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.x-dev.tar.gz"
 
 ; Patches
-projects[contrib][patch][] = "http://drupal.org/files/og_clone-menu-cloning-none-1940982-1.patch"
-projects[contrib][patch][] = "http://drupal.org/files/og_clone-item-id-alter-1941054-1.patch"
+projects[og_clone][patch][] = "http://drupal.org/files/og_clone-menu-cloning-none-1940982-1.patch"
+projects[og_clone][patch][] = "http://drupal.org/files/og_clone-item-id-alter-1941054-1.patch"
 projects[views_infinite_scroll][patch][] = "http://drupal.org/files/views_infinite_scroll-1806628-13.patch"
 projects[lti_tool_provider][patch][] = "http://drupal.org/files/lti_tool_provider-profile2-support.patch"
