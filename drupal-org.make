@@ -20,7 +20,7 @@ projects[context][subdir] = "contrib"
 projects[devel][version] = "1.3"
 projects[devel][subdir] = "contrib"
 
-projects[profiler_builder][version] = "1.0-rc3"
+projects[profiler_builder][version] = "1.x-dev"
 projects[profiler_builder][subdir] = "contrib"
 
 projects[features][version] = "2.0-beta1"
@@ -29,14 +29,23 @@ projects[features][subdir] = "contrib"
 projects[entityreference][version] = "1.0"
 projects[entityreference][subdir] = "contrib"
 
-projects[field_hidden][version] = "1.3"
-projects[field_hidden][subdir] = "contrib"
+projects[entityreference_prepopulate][version] = "1.2"
+projects[entityreference_prepopulate][subdir] = "contrib"
+
+projects[flexslider][version] = "1.0-rc3"
+projects[flexslider][subdir] = "contrib"
+
+projects[smartcrop][version] = "1.0-beta2"
+projects[smartcrop][subdir] = "contrib"
 
 projects[typogrify][version] = "1.0-rc6"
 projects[typogrify][subdir] = "contrib"
 
 projects[video_filter][version] = "3.1"
 projects[video_filter][subdir] = "contrib"
+
+projects[jammer][version] = "1.3"
+projects[jammer][subdir] = "contrib"
 
 projects[lti_tool_provider][version] = "1.x-dev"
 projects[lti_tool_provider][subdir] = "contrib"
@@ -47,20 +56,47 @@ projects[imce][subdir] = "contrib"
 projects[video_embed_field][version] = "2.0-beta5"
 projects[video_embed_field][subdir] = "contrib"
 
+projects[nodeformcols][version] = "1.x-dev"
+projects[nodeformcols][subdir] = "contrib"
+
 projects[og][version] = "2.0"
 projects[og][subdir] = "contrib"
+
+projects[og_clone][version] = "1.x-dev"
+projects[og_clone][subdir] = "contrib"
+
+projects[better_formats][version] = "1.0-beta1"
+projects[better_formats][subdir] = "contrib"
 
 projects[boxes][version] = "1.1"
 projects[boxes][subdir] = "contrib"
 
+projects[diff][version] = "2.0"
+projects[diff][subdir] = "contrib"
+
 projects[entity][version] = "1.0"
 projects[entity][subdir] = "contrib"
+
+projects[fitvids][version] = "1.8"
+projects[fitvids][subdir] = "contrib"
+
+projects[imagefield_crop][version] = "1.1"
+projects[imagefield_crop][subdir] = "contrib"
+
+projects[jquery_colorpicker][version] = "1.0-rc2"
+projects[jquery_colorpicker][subdir] = "contrib"
 
 projects[libraries][version] = "2.0"
 projects[libraries][subdir] = "contrib"
 
+projects[masquerade][version] = "1.0-rc5"
+projects[masquerade][subdir] = "contrib"
+
 projects[module_filter][version] = "1.7"
 projects[module_filter][subdir] = "contrib"
+
+projects[node_clone][version] = "1.0-rc1"
+projects[node_clone][subdir] = "contrib"
 
 projects[profile2][version] = "1.3"
 projects[profile2][subdir] = "contrib"
@@ -74,8 +110,29 @@ projects[token][subdir] = "contrib"
 projects[transliteration][version] = "3.1"
 projects[transliteration][subdir] = "contrib"
 
-projects[textbook][version] = "1.0-rc2"
+projects[unique_field][version] = "1.0-rc1"
+projects[unique_field][subdir] = "contrib"
+
+projects[entitycache][version] = "1.1"
+projects[entitycache][subdir] = "contrib"
+
+projects[radioactivity][version] = "2.8"
+projects[radioactivity][subdir] = "contrib"
+
+projects[regions][version] = "1.5"
+projects[regions][subdir] = "contrib"
+
+projects[rules][version] = "2.2"
+projects[rules][subdir] = "contrib"
+
+projects[voting_rules][version] = "1.0-alpha1"
+projects[voting_rules][subdir] = "contrib"
+
+projects[textbook][version] = "1.x-dev"
 projects[textbook][subdir] = "contrib"
+
+projects[delta][version] = "3.0-beta11"
+projects[delta][subdir] = "contrib"
 
 projects[uuid][version] = "1.x-dev"
 projects[uuid][subdir] = "contrib"
@@ -106,6 +163,12 @@ projects[views_bulk_operations][subdir] = "contrib"
 
 projects[views_infinite_scroll][version] = "1.1"
 projects[views_infinite_scroll][subdir] = "contrib"
+
+projects[rate][version] = "1.6"
+projects[rate][subdir] = "contrib"
+
+projects[votingapi][version] = "2.10"
+projects[votingapi][subdir] = "contrib"
 
 
 ; Themes
@@ -154,5 +217,7 @@ libraries[profiler][download][type] = "get"
 libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.x-dev.tar.gz"
 
 ; Patches
+projects[contrib][patch][] = "http://drupal.org/files/og_clone-menu-cloning-none-1940982-1.patch"
+projects[contrib][patch][] = "http://drupal.org/files/og_clone-item-id-alter-1941054-1.patch"
 projects[views_infinite_scroll][patch][] = "http://drupal.org/files/views_infinite_scroll-1806628-13.patch"
 projects[lti_tool_provider][patch][] = "http://drupal.org/files/lti_tool_provider-profile2-support.patch"
