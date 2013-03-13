@@ -96,6 +96,9 @@ projects[module_filter][subdir] = "contrib"
 projects[node_clone][version] = "1.0-rc1"
 projects[node_clone][subdir] = "contrib"
 
+projects[prepopulate][version] = "2.x-dev"
+projects[prepopulate][subdir] = "contrib"
+
 projects[profile2][version] = "1.3"
 projects[profile2][subdir] = "contrib"
 
@@ -146,6 +149,9 @@ projects[jquery_update][subdir] = "contrib"
 
 projects[masonry][version] = "1.1"
 projects[masonry][subdir] = "contrib"
+
+projects[quickpost_bookmarklet][version] = "1.3"
+projects[quickpost_bookmarklet][subdir] = "contrib"
 
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
