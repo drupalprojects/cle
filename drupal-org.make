@@ -1,8 +1,6 @@
 ; Collaborative learning environment make file
 core = "7.x"
 api = "2"
-; comment this out in to use on drupal.org
-; projects[drupal][version] = "7.x"
 
 ; Modules
 projects[admin_menu][version] = "3.0-rc4"
@@ -53,7 +51,7 @@ projects[lti_tool_provider][subdir] = "contrib"
 projects[imce][version] = "1.7"
 projects[imce][subdir] = "contrib"
 
-projects[video_embed_field][version] = "2.0-beta5"
+projects[video_embed_field][version] = "2.x-dev"
 projects[video_embed_field][subdir] = "contrib"
 
 projects[nodeformcols][version] = "1.x-dev"
@@ -172,6 +170,10 @@ projects[votingapi][subdir] = "contrib"
 
 
 ; Themes
+; bootstrap
+projects[bootstrap][type] = "theme"
+projects[bootstrap][version] = "2.0-beta2"
+projects[bootstrap][subdir] = "contrib"
 ; respond
 projects[respond][type] = "theme"
 projects[respond][version] = "3.0-beta1"
@@ -202,13 +204,19 @@ libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "library"
 libraries[ckeditor][destination] = "libraries"
 libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.4/ckeditor_3.6.4.tar.gz"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.tar.gz"
 
 libraries[colorpicker][directory_name] = "colorpicker"
 libraries[colorpicker][type] = "library"
 libraries[colorpicker][destination] = "libraries"
 libraries[colorpicker][download][type] = "get"
 libraries[colorpicker][download][url] = "http://www.eyecon.ro/colorpicker/colorpicker.zip"
+
+libraries[flexslider][directory_name] = "flexslider"
+libraries[flexslider][type] = "library"
+libraries[flexslider][destination] = "libraries"
+libraries[flexslider][download][type] = "get"
+libraries[flexslider][download][url] = "https://github.com/woothemes/FlexSlider/archive/flexslider1.zip"
 
 libraries[profiler][directory_name] = "profiler"
 libraries[profiler][type] = "library"
@@ -217,7 +225,13 @@ libraries[profiler][download][type] = "get"
 libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.x-dev.tar.gz"
 
 ; Patches
+; fix false menu cloning
 projects[og_clone][patch][] = "http://drupal.org/files/og_clone-menu-cloning-none-1940982-1.patch"
+; allow for altering what can be cloned
 projects[og_clone][patch][] = "http://drupal.org/files/og_clone-item-id-alter-1941054-1.patch"
+; allow multiple versions of jquery
+projects[jquery_update][patch][] = "http://drupal.org/files/jquery_update-1524944-78.patch"
+; infinite scroll to work with masonry
 projects[views_infinite_scroll][patch][] = "http://drupal.org/files/views_infinite_scroll-1806628-13.patch"
+; cool provider support for profile2 module
 projects[lti_tool_provider][patch][] = "http://drupal.org/files/lti_tool_provider-profile2-support.patch"
