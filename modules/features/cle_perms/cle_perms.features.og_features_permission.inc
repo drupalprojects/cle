@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * cle_section.features.og_features_permission.inc
+ * cle_perms.features.og_features_permission.inc
  */
 
 /**
  * Implements hook_og_features_default_permissions().
  */
-function cle_section_og_features_default_permissions() {
+function cle_perms_og_features_default_permissions() {
   $permissions = array();
 
   // Exported og permission: 'node:section:add user'

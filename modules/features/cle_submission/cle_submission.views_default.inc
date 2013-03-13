@@ -34,7 +34,7 @@ function cle_submission_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '';
   $handler->display->display_options['style_plugin'] = 'masonry_views_grid';
-  $handler->display->display_options['style_options']['masonry_width'] = '20';
+  $handler->display->display_options['style_options']['masonry_width'] = '260';
   $handler->display->display_options['style_options']['masonry_animated'] = TRUE;
   $handler->display->display_options['style_options']['masonry_resizable'] = TRUE;
   $handler->display->display_options['style_options']['masonry_center'] = TRUE;
