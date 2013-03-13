@@ -17,6 +17,7 @@ dependencies[] = masonry_views
 dependencies[] = og
 dependencies[] = og_ui
 dependencies[] = options
+dependencies[] = plup
 dependencies[] = radioactivity
 dependencies[] = rules
 dependencies[] = strongarm

@@ -96,6 +96,9 @@ projects[module_filter][subdir] = "contrib"
 projects[node_clone][version] = "1.0-rc1"
 projects[node_clone][subdir] = "contrib"
 
+projects[plup][version] = "1.x-dev"
+projects[plup][subdir] = "contrib"
+
 projects[prepopulate][version] = "2.x-dev"
 projects[prepopulate][subdir] = "contrib"
 
@@ -229,6 +232,12 @@ libraries[profiler][type] = "library"
 libraries[profiler][destination] = "libraries"
 libraries[profiler][download][type] = "get"
 libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.x-dev.tar.gz"
+
+libraries[plupload][directory_name] = "plupload"
+libraries[plupload][download][type] = "file"
+libraries[plupload][download][url] = "http://plupload.com/downloads/plupload_1_5_6.zip"
+libraries[plupload][patch][] = "http://drupal.org/files/plupload-1_5_6-rm_examples-1903850-5.patch"
+libraries[plupload][type] = "library"
 
 ; Patches
 ; fix false menu cloning
