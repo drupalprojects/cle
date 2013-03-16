@@ -73,6 +73,7 @@ function cle_submission_views_default_views() {
   $handler->display->display_options['fields']['field_images']['settings'] = array(
     'flexslider_optionset' => 'cle_images',
   );
+  $handler->display->display_options['fields']['field_images']['delta_limit'] = '3';
   $handler->display->display_options['fields']['field_images']['delta_offset'] = '0';
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';

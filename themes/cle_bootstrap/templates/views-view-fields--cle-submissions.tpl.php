@@ -32,13 +32,20 @@
 		if ($opacity < .2) {
 			$opacity = .2;
 		}
-		$opacity_style = ' style="opacity:' . $opacity .'"';
+		$opacity_style = ' style="opacity:' . $opacity;
 	 }
  }
+ $opacity_style .= ';"';
  // pull background style
- $item_style = 'background-color:#' . $row->field_field_color[0]['rendered']['#markup'];
+ $item_style = 'background-color:#';
+ if (!empty($row->field_field_color)) {
+   $item_style .= $row->field_field_color[0]['rendered']['#markup'];
+ }
+ else {
+	 $item_style .= CLE_ASSIGNMENT_DEFAULT_COLOR;
+ }
  // generate hover-container info
- print '<a'. $opacity_style .' href="node/'. $row->_field_data['nid']['entity']->nid .'" class="cle-tile-wrapper" id="cle-node-' . $row->_field_data['nid']['entity']->nid . '">';
+ print '<a' . $opacity_style . ' href="node/' . $row->_field_data['nid']['entity']->nid . '" class="cle-tile-wrapper" id="cle-node-' . $row->_field_data['nid']['entity']->nid . '">';
 ?>
 <?php foreach ($fields as $id => $field):
  if (!empty($field->separator)): ?>

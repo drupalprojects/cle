@@ -76,13 +76,6 @@ function cle_submission_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'enable_revisions_page_cle_submission';
-  $strongarm->value = 1;
-  $export['enable_revisions_page_cle_submission'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__cle_submission';
   $strongarm->value = array(
     'view_modes' => array(
@@ -237,20 +230,6 @@ function cle_submission_strongarm() {
   $strongarm->name = 'save_continue_cle_submission';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_cle_submission'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'show_diff_inline_cle_submission';
-  $strongarm->value = 0;
-  $export['show_diff_inline_cle_submission'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'show_preview_changes_cle_submission';
-  $strongarm->value = 1;
-  $export['show_preview_changes_cle_submission'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -10,7 +10,6 @@ include_once 'cle_section.features.inc';
  * Implements hook_init().
  */
 function cle_section_init() {
-  // placeholder during debug
   drupal_add_css(drupal_get_path('module', 'cle_section') . '/cle_section.css');
 }
 

@@ -21,14 +21,17 @@ projects[devel][subdir] = "contrib"
 projects[profiler_builder][version] = "1.x-dev"
 projects[profiler_builder][subdir] = "contrib"
 
-projects[features][version] = "2.0-beta1"
-projects[features][subdir] = "contrib"
-
 projects[entityreference][version] = "1.0"
 projects[entityreference][subdir] = "contrib"
 
 projects[entityreference_prepopulate][version] = "1.2"
 projects[entityreference_prepopulate][subdir] = "contrib"
+
+projects[flag][version] = "2.0"
+projects[flag][subdir] = "contrib"
+
+projects[features][version] = "2.0-beta1"
+projects[features][subdir] = "contrib"
 
 projects[flexslider][version] = "1.0-rc3"
 projects[flexslider][subdir] = "contrib"
@@ -69,7 +72,7 @@ projects[better_formats][subdir] = "contrib"
 projects[boxes][version] = "1.1"
 projects[boxes][subdir] = "contrib"
 
-projects[diff][version] = "2.0"
+projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
 projects[entity][version] = "1.0"
@@ -123,7 +126,7 @@ projects[entitycache][subdir] = "contrib"
 projects[radioactivity][version] = "2.8"
 projects[radioactivity][subdir] = "contrib"
 
-projects[regions][version] = "1.5"
+projects[regions][version] = "1.x-dev"
 projects[regions][subdir] = "contrib"
 
 projects[rules][version] = "2.2"
@@ -248,5 +251,7 @@ projects[og_clone][patch][] = "http://drupal.org/files/og_clone-item-id-alter-19
 projects[jquery_update][patch][] = "http://drupal.org/files/jquery_update-1524944-78.patch"
 ; infinite scroll to work with masonry
 projects[views_infinite_scroll][patch][] = "http://drupal.org/files/views_infinite_scroll-1806628-13.patch"
+; masonry issue with default views rendering for false values
+projects[masonry][patch][] = "http://drupal.org/files/masonry-typecast-booleans-for-js-1942824-1.patch"
 ; cool provider support for profile2 module
 projects[lti_tool_provider][patch][] = "http://drupal.org/files/lti_tool_provider-profile2-support.patch"

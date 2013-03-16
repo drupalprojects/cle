@@ -34,6 +34,60 @@ function cle_submission_views_api() {
 }
 
 /**
+ * Implements hook_flag_default_flags().
+ */
+function cle_submission_flag_default_flags() {
+  $flags = array();
+  // Exported flag: "Exemplary".
+  $flags['cle_exemplary'] = array(
+    'content_type' => 'node',
+    'title' => 'Exemplary',
+    'global' => '1',
+    'types' => array(
+      0 => 'cle_submission',
+    ),
+    'flag_short' => 'Mark Exemplary',
+    'flag_long' => 'This makes it stand out in lists as well as helps students find work that is deemed Exemplary of the goals of the assignment',
+    'flag_message' => 'Submission is now Exemplary',
+    'unflag_short' => 'Remove Exemplary Mark',
+    'unflag_long' => 'This sets it back to normal',
+    'unflag_message' => 'Submission has been returned to normal state',
+    'unflag_denied_text' => '',
+    'link_type' => 'confirm',
+    'roles' => array(
+      'flag' => array(
+        0 => '9',
+        1 => '5',
+        2 => '7',
+        3 => '3',
+      ),
+      'unflag' => array(
+        0 => '9',
+        1 => '5',
+        2 => '7',
+        3 => '3',
+      ),
+    ),
+    'weight' => 0,
+    'show_on_form' => 0,
+    'access_author' => '',
+    'show_on_page' => 1,
+    'show_on_teaser' => 0,
+    'show_contextual_link' => 0,
+    'i18n' => 0,
+    'flag_confirmation' => 'Are you sure you want to mark this exemplary?',
+    'unflag_confirmation' => 'Remove exemplary mark from this submission.',
+    'api_version' => 2,
+    'module' => 'cle_submission',
+    'locked' => array(
+      0 => 'name',
+    ),
+  );
+  return $flags;
+
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function cle_submission_image_default_styles() {
@@ -52,7 +106,7 @@ function cle_submission_image_default_styles() {
         'module' => 'smartcrop',
         'name' => 'smartcrop_scale_and_crop',
         'data' => array(
-          'width' => '260',
+          'width' => '250',
           'height' => '150',
           'upscale' => 1,
         ),
