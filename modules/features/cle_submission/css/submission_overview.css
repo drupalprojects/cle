@@ -81,6 +81,10 @@
   border:none;
 }
 
+.flexslider {
+  height:140px !important;
+}
+
 .view-cle-submissions.view-display-id-page .masonry-item {
   margin: 0px 0px 16px 0px !important;
 	width:260px !important;
