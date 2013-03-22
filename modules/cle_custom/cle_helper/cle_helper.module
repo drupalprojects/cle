@@ -6,10 +6,9 @@ define('CLE_HELPER_GROUP_BUNDLE', 'section');
  */
 
 /**
- * Implements hook_init().
+ * Implements hook_page_build().
  */
-function cle_helper_init() {
-  // placeholder during debug
+function cle_helper_page_build(&$page) {
   drupal_add_css(drupal_get_path('module', 'cle_helper') . '/cle_helper.css');
 }
 
@@ -96,15 +95,20 @@ function cle_helper_create_node_links($node) {
           // this is very specific but allows for item in og to be set
           $query['og_group_ref'] = $node->og_group_ref['und'][0]['target_id'];
         }
-        // build the link array which will be rendered on return
-        $links[$type_name . '_' . $field_name] = array(
-          'title' => t('Create new @content_type', $target_content_type),
-          'href' => format_string('node/add/!content_type', $target_content_type_link),
-          'query' => $query + drupal_get_destination(),
-          'attributes' => array(
-            'title' => t('Create new @content_type', $target_content_type),
-          ),
-        );
+				if (isset($node->group_group) && $type_name == 'cle_submission') {
+				  // don't print this link
+				}
+				else {
+					// build the link array which will be rendered on return
+					$links[$type_name . '_' . $field_name] = array(
+						'title' => t('Create new @content_type', $target_content_type),
+						'href' => format_string('node/add/!content_type', $target_content_type_link),
+						'query' => $query + drupal_get_destination(),
+						'attributes' => array(
+							'title' => t('Create new @content_type', $target_content_type),
+						),
+					);
+				}
       }
     }
   }

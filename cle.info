@@ -14,6 +14,7 @@ dependencies[] = cis_connector
 dependencies[] = cis_connector_profile2
 ; CLE
 dependencies[] = cle_helper
+dependencies[] = cle_achievements
 ; Chaos tool suite
 dependencies[] = ctools
 ; Context
@@ -95,6 +96,8 @@ dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = unique_field
+dependencies[] = achievements
+dependencies[] = addanother
 ; Performance and scalability
 dependencies[] = entitycache
 ; Radioactivity
@@ -126,6 +129,7 @@ dependencies[] = views_autocomplete_filters
 dependencies[] = views_bulk_operations
 dependencies[] = views_infinite_scroll
 dependencies[] = views_ui
+dependencies[] = editableviews
 ; Voting
 dependencies[] = rate
 dependencies[] = rate_slider
@@ -133,6 +137,7 @@ dependencies[] = votingapi
 ; Features
 dependencies[] = features
 dependencies[] = textbook_editor
+dependencies[] = regions_admin_example
 dependencies[] = cis_connector_profile2
 dependencies[] = cis_service_roles
 dependencies[] = cle_assignment

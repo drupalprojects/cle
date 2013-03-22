@@ -13,8 +13,36 @@ function cle_assignment_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'addanother_button_cle_assignment';
+  $strongarm->value = 1;
+  $export['addanother_button_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'addanother_message_cle_assignment';
+  $strongarm->value = 1;
+  $export['addanother_message_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'addanother_tab_cle_assignment';
+  $strongarm->value = 0;
+  $export['addanother_tab_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'addanother_tab_edit_cle_assignment';
+  $strongarm->value = 0;
+  $export['addanother_tab_edit_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_cle_assignment';
-  $strongarm->value = 'edit-submission';
+  $strongarm->value = 'edit-unique-field';
   $export['additional_settings__active_tab_cle_assignment'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -56,22 +84,43 @@ function cle_assignment_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_cle_assignment';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['comment_form_location_cle_assignment'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_cle_assignment';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_preview_cle_assignment'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_cle_assignment';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['comment_subject_field_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_cle_assignment';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_cle_assignment';
+  $strongarm->value = 0;
+  $export['diff_show_preview_changes_node_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_cle_assignment';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_cle_assignment'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -89,6 +138,9 @@ function cle_assignment_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -130,36 +182,68 @@ function cle_assignment_strongarm() {
     ),
     'additional_settings' => array(
       'region' => 'right',
-      'weight' => '2',
+      'weight' => '7',
       'has_required' => FALSE,
       'title' => 'Vertical tabs',
       'hidden' => 0,
     ),
     'actions' => array(
       'region' => 'main',
-      'weight' => '3',
+      'weight' => '4',
       'has_required' => FALSE,
       'title' => 'Save',
       'hidden' => 0,
     ),
     'body' => array(
       'region' => 'main',
-      'weight' => '2',
+      'weight' => '3',
       'has_required' => FALSE,
       'title' => 'Body',
       'hidden' => 0,
     ),
     'og_group_ref' => array(
       'region' => 'right',
-      'weight' => '0',
+      'weight' => '6',
       'has_required' => FALSE,
       'title' => NULL,
     ),
     'field_color' => array(
       'region' => 'right',
-      'weight' => '1',
+      'weight' => '5',
       'has_required' => TRUE,
       'title' => 'Color',
+    ),
+    'field_number' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => TRUE,
+      'title' => 'Number',
+    ),
+    'field_sub_number' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Sub-number',
+      'hidden' => 0,
+    ),
+    'field_due_date' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Due Date',
+      'hidden' => 0,
+    ),
+    'field_visibility' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => TRUE,
+      'title' => 'Visibility',
+    ),
+    'field_media_requirements' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Media Requirements',
     ),
   );
   $export['nodeformscols_field_placements_cle_assignment_default'] = $strongarm;
@@ -194,6 +278,40 @@ function cle_assignment_strongarm() {
   $strongarm->name = 'save_continue_cle_assignment';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'unique_field_comp_cle_assignment';
+  $strongarm->value = 'all';
+  $export['unique_field_comp_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'unique_field_fields_cle_assignment';
+  $strongarm->value = array(
+    0 => 'og_group_ref',
+    1 => 'field_number',
+    2 => 'field_sub_number',
+  );
+  $export['unique_field_fields_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'unique_field_scope_cle_assignment';
+  $strongarm->value = 'all';
+  $export['unique_field_scope_cle_assignment'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'unique_field_show_matches_cle_assignment';
+  $strongarm->value = array(
+    0 => 'show_matches',
+  );
+  $export['unique_field_show_matches_cle_assignment'] = $strongarm;
 
   return $export;
 }

@@ -3,8 +3,18 @@ core = "7.x"
 api = "2"
 
 ; Modules
+
+projects[achievements][version] = "1.x-dev"
+projects[achievements][subdir] = "contrib"
+
+projects[editableviews][version] = "1.0-beta2"
+projects[editableviews][subdir] = "contrib"
+
 projects[admin_menu][version] = "3.0-rc4"
 projects[admin_menu][subdir] = "contrib"
+
+projects[addanother][version] = "2.1"
+projects[addanother][subdir] = "contrib"
 
 projects[cis_connector][version] = "1.x-dev"
 projects[cis_connector][subdir] = "contrib"

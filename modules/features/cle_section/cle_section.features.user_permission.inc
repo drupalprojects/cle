@@ -15,7 +15,9 @@ function cle_section_user_default_permissions() {
     'name' => 'clone node',
     'roles' => array(
       'administrator' => 'administrator',
+      'instructor' => 'instructor',
       'staff' => 'staff',
+      'teaching assistant' => 'teaching assistant',
     ),
     'module' => 'clone',
   );
@@ -25,7 +27,9 @@ function cle_section_user_default_permissions() {
     'name' => 'clone own nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'instructor' => 'instructor',
       'staff' => 'staff',
+      'teaching assistant' => 'teaching assistant',
     ),
     'module' => 'clone',
   );

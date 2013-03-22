@@ -36,8 +36,8 @@ function cle_section_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'clone_omitted';
   $strongarm->value = array(
-    'cle_assignment' => 'cle_assignment',
     'cle_submission' => 'cle_submission',
+    'cle_assignment' => 0,
     'section' => 0,
   );
   $export['clone_omitted'] = $strongarm;
@@ -81,7 +81,7 @@ function cle_section_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_section';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_form_location_section'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -102,7 +102,7 @@ function cle_section_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_section';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_subject_field_section'] = $strongarm;
 
   $strongarm = new stdClass();

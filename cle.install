@@ -86,6 +86,7 @@ function cle_install() {
   // revert features to ensure they are all installed
   $features = array(
     'textbook_editor',
+		'regions_admin_example',
     'cis_connector_profile2',
     'cis_service_roles',
     'cle_assignment',
