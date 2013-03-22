@@ -336,6 +336,74 @@ function cle_submission_field_default_fields() {
         'module' => 'radioactivity',
         'settings' => array(),
         'type' => 'radioactivity_basic_widget',
+        'weight' => '8',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-cle_submission-field_files'.
+  $fields['node-cle_submission-field_files'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_files',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 1,
+        'display_field' => 0,
+        'profile2_private' => FALSE,
+        'uri_scheme' => 'private',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'cle_submission',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_table',
+          'weight' => '6',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_files',
+      'label' => 'Files',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => 'submission_files',
+        'file_extensions' => 'txt doc docx pdf',
+        'max_filesize' => '10MB',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'file',
+        'settings' => array(
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'file_generic',
         'weight' => '6',
       ),
     ),
@@ -367,7 +435,7 @@ function cle_submission_field_default_fields() {
       'settings' => array(
         'default_image' => 0,
         'profile2_private' => FALSE,
-        'uri_scheme' => 'public',
+        'uri_scheme' => 'private',
       ),
       'translatable' => '0',
       'type' => 'image',
@@ -406,23 +474,96 @@ function cle_submission_field_default_fields() {
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '',
-        'title_field' => 0,
+        'title_field' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'plup',
         'settings' => array(
-          'collapsible' => 2,
-          'croparea' => '500x500',
-          'enforce_minimum' => TRUE,
-          'enforce_ratio' => TRUE,
-          'preview_image_style' => 'cle_square',
-          'progress_indicator' => 'throbber',
-          'resolution' => '200x150',
+          'image_style' => 'thumbnail',
         ),
         'type' => 'image_plupload',
         'weight' => '5',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-cle_submission-field_links'.
+  $fields['node-cle_submission-field_links'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_links',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'profile2_private' => FALSE,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'cle_submission',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '7',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_links',
+      'label' => 'Links',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => 'nofollow',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'rel_remove' => 'default',
+        'title' => 'optional',
+        'title_maxlength' => '128',
+        'title_value' => '',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '7',
       ),
     ),
   );
@@ -456,7 +597,6 @@ function cle_submission_field_default_fields() {
           'module' => 'video_embed_field',
           'settings' => array(
             'description' => 1,
-            'description_position' => 'bottom',
             'video_style' => 'cle_default',
           ),
           'type' => 'video_embed_field',
@@ -601,7 +741,7 @@ function cle_submission_field_default_fields() {
         'module' => 'og',
         'settings' => array(),
         'type' => 'og_complex',
-        'weight' => 0,
+        'weight' => '0',
       ),
     ),
   );
@@ -612,7 +752,9 @@ function cle_submission_field_default_fields() {
   t('Body');
   t('Comment');
   t('Energy');
+  t('Files');
   t('Images');
+  t('Links');
   t('Section');
   t('Video');
 

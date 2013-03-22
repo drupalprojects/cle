@@ -192,7 +192,7 @@ admin/*';
       'use_source_translation' => TRUE,
       'value_type' => 'option',
       'theme' => 'rate_template_emotion',
-      'css' => drupal_get_path('module', 'rate') . '/templates/emotion/emotion.css',
+      'css' => 'sites/all/modules/contrib/rate/templates/emotion/emotion.css',
       'translate' => TRUE,
     ),
   );

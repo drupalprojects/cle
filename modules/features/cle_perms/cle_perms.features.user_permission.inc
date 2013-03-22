@@ -10,9 +10,9 @@
 function cle_perms_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: access overlay.
-  $permissions['access overlay'] = array(
-    'name' => 'access overlay',
+  // Exported permission: access achievements.
+  $permissions['access achievements'] = array(
+    'name' => 'access achievements',
     'roles' => array(
       'administrator' => 'administrator',
       'instructor' => 'instructor',
@@ -20,7 +20,72 @@ function cle_perms_user_default_permissions() {
       'student' => 'student',
       'teaching assistant' => 'teaching assistant',
     ),
+    'module' => 'achievements',
+  );
+
+  // Exported permission: access content.
+  $permissions['access content'] = array(
+    'name' => 'access content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'guest' => 'guest',
+      'instructor' => 'instructor',
+      'past student' => 'past student',
+      'staff' => 'staff',
+      'student' => 'student',
+      'teaching assistant' => 'teaching assistant',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: access overlay.
+  $permissions['access overlay'] = array(
+    'name' => 'access overlay',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'guest' => 'guest',
+      'instructor' => 'instructor',
+      'past student' => 'past student',
+      'staff' => 'staff',
+      'student' => 'student',
+      'teaching assistant' => 'teaching assistant',
+    ),
     'module' => 'overlay',
+  );
+
+  // Exported permission: administer site configuration.
+  $permissions['administer site configuration'] = array(
+    'name' => 'administer site configuration',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'staff' => 'staff',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: administer themes.
+  $permissions['administer themes'] = array(
+    'name' => 'administer themes',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'staff' => 'staff',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: allow plupload.
+  $permissions['allow plupload'] = array(
+    'name' => 'allow plupload',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'guest' => 'guest',
+      'instructor' => 'instructor',
+      'past student' => 'past student',
+      'staff' => 'staff',
+      'student' => 'student',
+      'teaching assistant' => 'teaching assistant',
+    ),
+    'module' => 'plup',
   );
 
   // Exported permission: bypass node access.
@@ -28,6 +93,127 @@ function cle_perms_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       'administrator' => 'administrator',
+      'staff' => 'staff',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: create cle_submission content.
+  $permissions['create cle_submission content'] = array(
+    'name' => 'create cle_submission content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
+      'student' => 'student',
+      'teaching assistant' => 'teaching assistant',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: create section content.
+  $permissions['create section content'] = array(
+    'name' => 'create section content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete any cle_submission content.
+  $permissions['delete any cle_submission content'] = array(
+    'name' => 'delete any cle_submission content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'staff' => 'staff',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete any section content.
+  $permissions['delete any section content'] = array(
+    'name' => 'delete any section content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own cle_submission content.
+  $permissions['delete own cle_submission content'] = array(
+    'name' => 'delete own cle_submission content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
+      'student' => 'student',
+      'teaching assistant' => 'teaching assistant',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own section content.
+  $permissions['delete own section content'] = array(
+    'name' => 'delete own section content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'staff' => 'staff',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: earn achievements.
+  $permissions['earn achievements'] = array(
+    'name' => 'earn achievements',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'student' => 'student',
+    ),
+    'module' => 'achievements',
+  );
+
+  // Exported permission: edit any cle_submission content.
+  $permissions['edit any cle_submission content'] = array(
+    'name' => 'edit any cle_submission content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit any section content.
+  $permissions['edit any section content'] = array(
+    'name' => 'edit any section content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'staff' => 'staff',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own cle_submission content.
+  $permissions['edit own cle_submission content'] = array(
+    'name' => 'edit own cle_submission content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
+      'student' => 'student',
+      'teaching assistant' => 'teaching assistant',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own section content.
+  $permissions['edit own section content'] = array(
+    'name' => 'edit own section content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
       'staff' => 'staff',
     ),
     'module' => 'node',
@@ -42,6 +228,24 @@ function cle_perms_user_default_permissions() {
       'staff' => 'staff',
     ),
     'module' => 'masquerade',
+  );
+
+  // Exported permission: unique_field_perm_bypass.
+  $permissions['unique_field_perm_bypass'] = array(
+    'name' => 'unique_field_perm_bypass',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'unique_field',
+  );
+
+  // Exported permission: use add another.
+  $permissions['use add another'] = array(
+    'name' => 'use add another',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'addanother',
   );
 
   // Exported permission: use text format student_work.
@@ -63,6 +267,19 @@ function cle_perms_user_default_permissions() {
       'teaching assistant' => 'teaching assistant',
     ),
     'module' => 'rate',
+  );
+
+  // Exported permission: view regions_admin_left region.
+  $permissions['view regions_admin_left region'] = array(
+    'name' => 'view regions_admin_left region',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
+      'teaching assistant' => 'teaching assistant',
+    ),
+    'module' => 'regions',
   );
 
   return $permissions;

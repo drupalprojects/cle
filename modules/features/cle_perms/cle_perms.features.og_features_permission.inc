@@ -12,23 +12,17 @@ function cle_perms_og_features_default_permissions() {
 
   // Exported og permission: 'node:section:add user'
   $permissions['node:section:add user'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-    ),
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:section:administer group'
   $permissions['node:section:administer group'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-    ),
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:section:approve and deny subscription'
   $permissions['node:section:approve and deny subscription'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-    ),
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:section:create cle_submission content'
@@ -56,23 +50,17 @@ function cle_perms_og_features_default_permissions() {
 
   // Exported og permission: 'node:section:manage members'
   $permissions['node:section:manage members'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-    ),
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:section:manage permissions'
   $permissions['node:section:manage permissions'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-    ),
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:section:manage roles'
   $permissions['node:section:manage roles'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-    ),
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:section:subscribe'

@@ -76,6 +76,20 @@ function cle_submission_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_cle_submission';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_cle_submission'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_cle_submission';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_cle_submission'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__cle_submission';
   $strongarm->value = array(
     'view_modes' => array(
@@ -89,6 +103,9 @@ function cle_submission_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -195,6 +212,20 @@ function cle_submission_strongarm() {
       'weight' => '3',
       'has_required' => FALSE,
       'title' => 'Energy',
+      'hidden' => 0,
+    ),
+    'field_files' => array(
+      'region' => 'main',
+      'weight' => '3.9',
+      'has_required' => FALSE,
+      'title' => 'Files',
+      'hidden' => 0,
+    ),
+    'field_links' => array(
+      'region' => 'main',
+      'weight' => '3.9',
+      'has_required' => FALSE,
+      'title' => 'Links',
       'hidden' => 0,
     ),
   );
