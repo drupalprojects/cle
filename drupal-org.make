@@ -263,5 +263,7 @@ projects[jquery_update][patch][] = "http://drupal.org/files/jquery_update-152494
 projects[views_infinite_scroll][patch][] = "http://drupal.org/files/views_infinite_scroll-1806628-13.patch"
 ; masonry issue with default views rendering for false values
 projects[masonry][patch][] = "http://drupal.org/files/masonry-typecast-booleans-for-js-1942824-1.patch"
-; cool provider support for profile2 module
+; tool provider support for profile2 module
 projects[lti_tool_provider][patch][] = "http://drupal.org/files/lti_tool_provider-profile2-support.patch"
+; profile2 entity cache glitch
+projects[profile2][patch][] = "http://drupal.org/files/profile2-1387268-30.patch"
