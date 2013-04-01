@@ -71,4 +71,4 @@ features[variable][] = rate_bot_botscout_key
 features[variable][] = rate_bot_hour_threshold
 features[variable][] = rate_bot_minute_threshold
 features[variable][] = rate_widgets
-features_exclude[dependencies][cle_section] = cle_section
+features_exclude[dependencies][cis_section] = cis_section

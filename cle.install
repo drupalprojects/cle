@@ -89,9 +89,9 @@ function cle_install() {
 		'regions_admin_example',
     'cis_connector_profile2',
     'cis_service_roles',
+		'cis_section',
     'cle_assignment',
     'cle_perms',
-    'cle_section',
     'cle_submission',
   );
   // revert all features
