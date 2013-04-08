@@ -19,7 +19,7 @@ projects[addanother][subdir] = "contrib"
 projects[cis_connector][version] = "1.x-dev"
 projects[cis_connector][subdir] = "contrib"
 
-projects[ctools][version] = "1.2"
+projects[ctools][version] = "1.3"
 projects[ctools][subdir] = "contrib"
 
 projects[context][version] = "3.0-beta6"
@@ -40,7 +40,7 @@ projects[entityreference_prepopulate][subdir] = "contrib"
 projects[flag][version] = "2.0"
 projects[flag][subdir] = "contrib"
 
-projects[features][version] = "2.0-beta1"
+projects[features][version] = "2.0-beta2"
 projects[features][subdir] = "contrib"
 
 projects[flexslider][version] = "1.0-rc3"
@@ -172,7 +172,7 @@ projects[quickpost_bookmarklet][subdir] = "contrib"
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
-projects[views][version] = "3.5"
+projects[views][version] = "3.6"
 projects[views][subdir] = "contrib"
 
 projects[views_autocomplete_filters][version] = "1.0-beta2"
@@ -189,6 +189,9 @@ projects[rate][subdir] = "contrib"
 
 projects[votingapi][version] = "2.10"
 projects[votingapi][subdir] = "contrib"
+
+projects[seckit][version] = "1.5"
+projects[seckit][subdir] = "contrib"
 
 
 ; Themes
