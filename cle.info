@@ -11,7 +11,6 @@ dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 ; CIS
 dependencies[] = cis_connector
-dependencies[] = cis_connector_profile2
 ; CLE
 dependencies[] = cle_helper
 dependencies[] = cle_achievements
@@ -90,7 +89,6 @@ dependencies[] = libraries
 dependencies[] = masquerade
 dependencies[] = module_filter
 dependencies[] = prepopulate
-dependencies[] = profile2
 dependencies[] = quickpost_bookmarklet
 dependencies[] = strongarm
 dependencies[] = token
@@ -138,7 +136,6 @@ dependencies[] = votingapi
 dependencies[] = features
 dependencies[] = textbook_editor
 dependencies[] = regions_admin_example
-dependencies[] = cis_connector_profile2
 dependencies[] = cis_service_roles
 dependencies[] = cis_section
 dependencies[] = cle_assignment

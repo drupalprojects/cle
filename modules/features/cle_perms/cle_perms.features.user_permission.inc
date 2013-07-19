@@ -111,32 +111,12 @@ function cle_perms_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create section content.
-  $permissions['create section content'] = array(
-    'name' => 'create section content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'instructor' => 'instructor',
-      'staff' => 'staff',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: delete any cle_submission content.
   $permissions['delete any cle_submission content'] = array(
     'name' => 'delete any cle_submission content',
     'roles' => array(
       'administrator' => 'administrator',
       'staff' => 'staff',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete any section content.
-  $permissions['delete any section content'] = array(
-    'name' => 'delete any section content',
-    'roles' => array(
-      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -150,16 +130,6 @@ function cle_perms_user_default_permissions() {
       'staff' => 'staff',
       'student' => 'student',
       'teaching assistant' => 'teaching assistant',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own section content.
-  $permissions['delete own section content'] = array(
-    'name' => 'delete own section content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -185,15 +155,6 @@ function cle_perms_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any section content.
-  $permissions['edit any section content'] = array(
-    'name' => 'edit any section content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'staff' => 'staff',
-    ),
-    'module' => 'node',
-  );
 
   // Exported permission: edit own cle_submission content.
   $permissions['edit own cle_submission content'] = array(
@@ -204,17 +165,6 @@ function cle_perms_user_default_permissions() {
       'staff' => 'staff',
       'student' => 'student',
       'teaching assistant' => 'teaching assistant',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own section content.
-  $permissions['edit own section content'] = array(
-    'name' => 'edit own section content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'instructor' => 'instructor',
-      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -267,19 +217,6 @@ function cle_perms_user_default_permissions() {
       'teaching assistant' => 'teaching assistant',
     ),
     'module' => 'rate',
-  );
-
-  // Exported permission: view regions_admin_left region.
-  $permissions['view regions_admin_left region'] = array(
-    'name' => 'view regions_admin_left region',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
-      'instructor' => 'instructor',
-      'staff' => 'staff',
-      'teaching assistant' => 'teaching assistant',
-    ),
-    'module' => 'regions',
   );
 
   return $permissions;

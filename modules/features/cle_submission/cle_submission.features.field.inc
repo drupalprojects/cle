@@ -36,7 +36,7 @@ function cle_submission_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'text_long',
@@ -123,7 +123,7 @@ function cle_submission_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'text_with_summary',
@@ -233,7 +233,7 @@ function cle_submission_field_default_fields() {
             'cle_assignment' => 'cle_assignment',
           ),
         ),
-        'profile2_private' => FALSE,
+
         'target_type' => 'node',
       ),
       'translatable' => '0',
@@ -300,7 +300,7 @@ function cle_submission_field_default_fields() {
       'locked' => '0',
       'module' => 'radioactivity',
       'settings' => array(
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'radioactivity',
@@ -367,7 +367,7 @@ function cle_submission_field_default_fields() {
       'settings' => array(
         'display_default' => 1,
         'display_field' => 0,
-        'profile2_private' => FALSE,
+
         'uri_scheme' => 'private',
       ),
       'translatable' => '0',
@@ -434,7 +434,7 @@ function cle_submission_field_default_fields() {
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
-        'profile2_private' => FALSE,
+
         'uri_scheme' => 'private',
       ),
       'translatable' => '0',
@@ -511,7 +511,7 @@ function cle_submission_field_default_fields() {
           'url_cutoff' => 80,
         ),
         'enable_tokens' => 1,
-        'profile2_private' => FALSE,
+
         'title' => 'optional',
         'title_maxlength' => 128,
         'title_value' => '',
@@ -581,7 +581,7 @@ function cle_submission_field_default_fields() {
       'locked' => '0',
       'module' => 'video_embed_field',
       'settings' => array(
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'video_embed_field',
@@ -671,7 +671,7 @@ function cle_submission_field_default_fields() {
           ),
         ),
         'handler_submit' => 'Change handler',
-        'profile2_private' => FALSE,
+
         'target_type' => 'node',
       ),
       'target_type' => 'node',

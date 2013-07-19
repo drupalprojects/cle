@@ -36,7 +36,7 @@ function cle_assignment_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'text_long',
@@ -100,7 +100,7 @@ function cle_assignment_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'text_with_summary',
@@ -185,7 +185,7 @@ function cle_assignment_field_default_fields() {
       'locked' => '0',
       'module' => 'jquery_colorpicker',
       'settings' => array(
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'jquery_colorpicker',
@@ -244,7 +244,7 @@ function cle_assignment_field_default_fields() {
           'second' => 0,
           'year' => 'year',
         ),
-        'profile2_private' => FALSE,
+
         'timezone_db' => 'UTC',
         'todate' => '',
         'tz_handling' => 'site',
@@ -324,7 +324,7 @@ function cle_assignment_field_default_fields() {
           'field_files' => 'Files',
         ),
         'allowed_values_function' => '',
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'list_text',
@@ -392,7 +392,7 @@ function cle_assignment_field_default_fields() {
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'text',
@@ -502,7 +502,7 @@ P',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'text',
@@ -604,7 +604,7 @@ i',
           1 => 'Public',
         ),
         'allowed_values_function' => '',
-        'profile2_private' => FALSE,
+
       ),
       'translatable' => '0',
       'type' => 'list_boolean',
@@ -687,7 +687,7 @@ i',
           ),
         ),
         'handler_submit' => 'Change handler',
-        'profile2_private' => FALSE,
+
         'target_type' => 'node',
       ),
       'target_type' => 'node',
