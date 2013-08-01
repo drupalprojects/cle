@@ -193,6 +193,9 @@ projects[votingapi][subdir] = "contrib"
 projects[seckit][version] = "1.5"
 projects[seckit][subdir] = "contrib"
 
+projects[httprl][version] = "1.12"
+projects[httprl][subdir] = "contrib"
+
 
 ; Themes
 ; bootstrap
