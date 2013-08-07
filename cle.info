@@ -141,39 +141,3 @@ dependencies[] = cis_section
 dependencies[] = cle_assignment
 dependencies[] = cle_submission
 dependencies[] = cle_perms
-
-; ----------
-; Variables
-; ----------
-variables[admin_theme] = 'rubik'
-variables[filter_fallback_format] = 'plain_text'
-variables[lti_tool_provider_og_group_mapping][context_id] = 'field_section_id'
-variables[lti_tool_provider_og_group_mapping][context_label] = 'none'
-variables[lti_tool_provider_og_group_mapping][context_title] = 'title'
-variables[lti_tool_provider_og_group_mapping][context_type] = 'none'
-variables[lti_tool_provider_og_group_mapping_bundle] = 'node:section'
-variables[lti_tool_provider_og_group_role_array][Learner] = '2'
-variables[lti_tool_provider_og_group_role_array][Instructor] = '3'
-variables[lti_tool_provider_og_group_role_array][ContentDeveloper] = '3'
-variables[lti_tool_provider_og_group_role_array][Member] = '2'
-variables[lti_tool_provider_og_group_role_array][Manager] = '3'
-variables[lti_tool_provider_og_group_role_array][Mentor] = '3'
-variables[lti_tool_provider_og_group_role_array][Administrator] = '3'
-variables[lti_tool_provider_og_group_role_array][TeachingAssistant] = '3'
-variables[lti_tool_provider_og_provision_groups] = 1
-variables[node_admin_theme] = 1
-variables[pathauto_node_pattern] = 'content/[node:title]'
-variables[pathauto_punctuation_hyphen] = 1
-variables[pathauto_taxonomy_term_pattern] = '[term:vocabulary]/[term:name]'
-variables[pathauto_user_pattern] = 'users/[user:name]'
-variables[path_alias_whitelist][user] = true
-variables[site_frontpage] = 'submissions'
-variables[update_check_frequency] = '7'
-variables[update_notification_threshold] = 'security'
-variables[theme_default] = 'cle_bootstrap'
-variables[user_pictures] = '1'
-variables[user_picture_dimensions] = '1024x1024'
-variables[user_picture_file_size] = '800'
-variables[user_picture_style] = 'thumbnail'
-variables[user_register] = '2'
-

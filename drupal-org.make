@@ -40,7 +40,7 @@ projects[entityreference_prepopulate][subdir] = "contrib"
 projects[flag][version] = "2.0"
 projects[flag][subdir] = "contrib"
 
-projects[features][version] = "2.0-beta2"
+projects[features][version] = "2.0-rc2"
 projects[features][subdir] = "contrib"
 
 projects[flexslider][version] = "1.0-rc3"
@@ -85,7 +85,7 @@ projects[boxes][subdir] = "contrib"
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
-projects[entity][version] = "1.0"
+projects[entity][version] = "1.1"
 projects[entity][subdir] = "contrib"
 
 projects[fitvids][version] = "1.8"
@@ -114,9 +114,6 @@ projects[plup][subdir] = "contrib"
 
 projects[prepopulate][version] = "2.x-dev"
 projects[prepopulate][subdir] = "contrib"
-
-projects[profile2][version] = "1.3"
-projects[profile2][subdir] = "contrib"
 
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
@@ -246,17 +243,29 @@ libraries[flexslider][destination] = "libraries"
 libraries[flexslider][download][type] = "get"
 libraries[flexslider][download][url] = "https://github.com/woothemes/FlexSlider/archive/flexslider1.zip"
 
-libraries[profiler][directory_name] = "profiler"
-libraries[profiler][type] = "library"
-libraries[profiler][destination] = "libraries"
-libraries[profiler][download][type] = "get"
-libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.x-dev.tar.gz"
-
 libraries[plupload][directory_name] = "plupload"
 libraries[plupload][download][type] = "file"
 libraries[plupload][download][url] = "http://plupload.com/downloads/plupload_1_5_6.zip"
 libraries[plupload][patch][] = "http://drupal.org/files/plupload-1_5_6-rm_examples-1903850-5.patch"
 libraries[plupload][type] = "library"
+
+libraries[masonry][directory_name] = "masonry"
+libraries[masonry][type] = "library"
+libraries[masonry][destination] = "libraries"
+libraries[masonry][download][type] = "get"
+libraries[masonry][download][url] = "http://masonry.desandro.com/jquery.masonry.min.js"
+
+libraries[fitvids][directory_name] = "fitvids"
+libraries[fitvids][type] = "library"
+libraries[fitvids][destination] = "libraries"
+libraries[fitvids][download][type] = "get"
+libraries[fitvids][download][url] = "https://raw.github.com/davatron5000/FitVids.js/master/jquery.fitvids.js"
+
+libraries[oauth][directory_name] = "oauth"
+libraries[oauth][type] = "library"
+libraries[oauth][destination] = "libraries"
+libraries[oauth][download][type] = "get"
+libraries[oauth][download][url] = "https://github.com/juampy72/OAuth-PHP/archive/master.zip"
 
 ; Patches
 ; fix false menu cloning
@@ -269,7 +278,3 @@ projects[jquery_update][patch][] = "http://drupal.org/files/jquery_update-152494
 projects[views_infinite_scroll][patch][] = "http://drupal.org/files/views_infinite_scroll-1806628-13.patch"
 ; masonry issue with default views rendering for false values
 projects[masonry][patch][] = "http://drupal.org/files/masonry-typecast-booleans-for-js-1942824-1.patch"
-; tool provider support for profile2 module
-projects[lti_tool_provider][patch][] = "http://drupal.org/files/lti_tool_provider-profile2-support.patch"
-; profile2 entity cache glitch
-projects[profile2][patch][] = "http://drupal.org/files/profile2-1387268-30.patch"
