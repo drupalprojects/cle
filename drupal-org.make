@@ -40,7 +40,7 @@ projects[entityreference_prepopulate][subdir] = "contrib"
 projects[flag][version] = "2.0"
 projects[flag][subdir] = "contrib"
 
-projects[features][version] = "2.0-rc2"
+projects[features][version] = "2.0-rc3"
 projects[features][subdir] = "contrib"
 
 projects[flexslider][version] = "1.0-rc3"
@@ -85,7 +85,7 @@ projects[boxes][subdir] = "contrib"
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
-projects[entity][version] = "1.1"
+projects[entity][version] = "1.2"
 projects[entity][subdir] = "contrib"
 
 projects[fitvids][version] = "1.8"
@@ -160,7 +160,7 @@ projects[imce_wysiwyg][subdir] = "contrib"
 projects[jquery_update][version] = "2.3"
 projects[jquery_update][subdir] = "contrib"
 
-projects[masonry][version] = "1.1"
+projects[masonry][version] = "2.0"
 projects[masonry][subdir] = "contrib"
 
 projects[quickpost_bookmarklet][version] = "1.3"
@@ -253,7 +253,7 @@ libraries[masonry][directory_name] = "masonry"
 libraries[masonry][type] = "library"
 libraries[masonry][destination] = "libraries"
 libraries[masonry][download][type] = "get"
-libraries[masonry][download][url] = "http://masonry.desandro.com/jquery.masonry.min.js"
+libraries[masonry][download][url] = "http://masonry.desandro.com/masonry.pkgd.min.js"
 
 libraries[fitvids][directory_name] = "fitvids"
 libraries[fitvids][type] = "library"
