@@ -249,12 +249,6 @@ libraries[plupload][download][url] = "http://plupload.com/downloads/plupload_1_5
 libraries[plupload][patch][] = "http://drupal.org/files/plupload-1_5_6-rm_examples-1903850-5.patch"
 libraries[plupload][type] = "library"
 
-libraries[masonry][directory_name] = "masonry"
-libraries[masonry][type] = "library"
-libraries[masonry][destination] = "libraries"
-libraries[masonry][download][type] = "get"
-libraries[masonry][download][url] = "http://masonry.desandro.com/masonry.pkgd.min.js"
-
 libraries[fitvids][directory_name] = "fitvids"
 libraries[fitvids][type] = "library"
 libraries[fitvids][destination] = "libraries"

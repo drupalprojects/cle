@@ -8,6 +8,12 @@ projects[drupal][version] = "7.x"
 
 ; Libraries
 
+libraries[masonry][directory_name] = "masonry"
+libraries[masonry][type] = "library"
+libraries[masonry][destination] = "libraries"
+libraries[masonry][download][type] = "get"
+libraries[masonry][download][url] = "http://masonry.desandro.com/masonry.pkgd.min.js"
+
 libraries[bootstrap][directory_name] = "bootstrap"
 libraries[bootstrap][type] = "library"
 libraries[bootstrap][destination] = "themes/contrib/bootstrap"
