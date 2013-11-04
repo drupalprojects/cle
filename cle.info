@@ -138,6 +138,7 @@ dependencies[] = textbook_editor
 dependencies[] = regions_admin_example
 dependencies[] = cis_service_roles
 dependencies[] = cis_section
+dependencies[] = cis_service_connection_ux
 dependencies[] = cle_assignment
 dependencies[] = cle_submission
 dependencies[] = cle_perms

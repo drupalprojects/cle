@@ -87,9 +87,10 @@ function cle_install() {
     'regions_admin_example',
     'cis_service_roles',
     'cis_section',
+    'cis_service_connection_ux',
     'cle_assignment',
-    'cle_perms',
     'cle_submission',
+    'cle_perms',
   );
   // revert all features
   cache_clear_all();
@@ -97,17 +98,11 @@ function cle_install() {
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'administrator';
-  $admin_role->weight = 10;
+  $admin_role->weight = 7;
   user_role_save($admin_role);
   user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
   // Set this as the administrator role.
   variable_set('user_admin_role', $admin_role->rid);
-
-  // Assign user 1 the "administrator" role.
-  db_insert('users_roles')
-    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
-    ->execute();
-    
   // stupid work around for regions conflict with module perms
   $roles = array('teaching assistant', 'instructor', 'administrator', 'staff');
   foreach ($roles as $name) {
@@ -121,7 +116,12 @@ function cle_install() {
   }
   drupal_static_reset('user_access');
   drupal_static_reset('user_role_permissions');
-  // Update the menu router information.
+  // set admin menu client side cache to off for performance reasons
+  variable_set('admin_menu_cache_client', FALSE);
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
   menu_rebuild();
   // ignore any rebuild messages
   node_access_needs_rebuild(FALSE);
