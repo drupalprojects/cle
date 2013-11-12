@@ -1,4 +1,7 @@
-// JavaScript Document
+/**
+ * @file
+ * assignment bulk operations.
+ */
 (function ($) {
   Drupal.behaviors.assignmentBulk = {
     attach: function(context, settings) {

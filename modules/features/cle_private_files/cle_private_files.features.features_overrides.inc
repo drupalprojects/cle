@@ -14,5 +14,5 @@ function cle_private_files_features_override_default_overrides() {
   // Exported overrides for: field
   $overrides["field.node-cle_submission-field_images.field_config|settings|uri_scheme"] = 'private';
 
- return $overrides;
+  return $overrides;
 }

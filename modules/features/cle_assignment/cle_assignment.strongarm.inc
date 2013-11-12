@@ -230,7 +230,7 @@ function cle_assignment_strongarm() {
       'region' => 'right',
       'weight' => '2',
       'has_required' => FALSE,
-      'title' => 'Due Date',
+      'title' => 'Due date',
       'hidden' => 0,
     ),
     'field_visibility' => array(
@@ -243,7 +243,7 @@ function cle_assignment_strongarm() {
       'region' => 'right',
       'weight' => '0',
       'has_required' => TRUE,
-      'title' => 'Media Requirements',
+      'title' => 'Media requirements',
     ),
   );
   $export['nodeformscols_field_placements_cle_assignment_default'] = $strongarm;

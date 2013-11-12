@@ -3,25 +3,25 @@
  * @file
  * Integrates the Achievements module with Collaborative learning environment
  */
- 
+
 /**
- * Implements hook_menu_alter()
+ * Implements hook_menu_alter().
  */
 function cle_achievements_menu_alter(&$items) {
-	$items['cle/leaderboard'] = array(
-	  'access arguments' => array('access achievements'),
+  $items['cle/leaderboard'] = array(
+    'access arguments' => array('access achievements'),
     'description' => 'View the site-wide achievements leaderboard.',
     'file' => 'achievements.pages.inc',
-		'file path' => drupal_get_path('module', 'achievements'),
+    'file path' => drupal_get_path('module', 'achievements'),
     'page callback' => 'achievements_leaderboard_totals',
     'title' => 'Leaderboard',
-		'type' => MENU_LOCAL_TASK,
-		'weight' => 3,
-		'tab_parent' => 'cle',
-		'tab_root' => 'cle',
-		'menu_name' => 'main-menu',
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 3,
+    'tab_parent' => 'cle',
+    'tab_root' => 'cle',
+    'menu_name' => 'main-menu',
     'context' => MENU_CONTEXT_INLINE,
-	);
+  );
 }
 
 /**
@@ -30,36 +30,36 @@ function cle_achievements_menu_alter(&$items) {
 function cle_achievements_achievements_info() {
   $achievements = array(
     // comments / participation rewards
-		'comments' => array(
-      'title' => t('Community Critique'),
+    'comments' => array(
+      'title' => t('Community critique'),
       'achievements' => array(
-				'comment-count-1' => array(
-					'title'       => t('Posted your first comment!'),
-					'description' => t("Welcome to the community, thanks for participating!"),
-					'storage'     => 'comment-count',
-					'points'      => 1,
-				),
-				'comment-count-5' => array(
-					'title'       => t('Posted 5 comments!'),
-					'description' => t('Keep up the great work critiquing!'),
-					'storage'     => 'comment-count',
-					'points'      => 4,
-				),
-				'comment-count-10' => array(
-					'title'       => t('Posted 10 comments!'),
-					'description' => t('Keep Going! We learn best when we learn together.'),
-					'storage'     => 'comment-count',
-					'points'      => 5,
-				),
-				'comment-count-20' => array(
-					'title'       => t('Posted 20 comments!'),
-					'description' => t('Your a discussion powerhouse'),
-					'storage'     => 'comment-count',
-					'points'      => 10,
-				),
-			),
-		),
-		// submission rewards
+        'comment-count-1' => array(
+          'title'       => t('Posted your first comment!'),
+          'description' => t("Welcome to the community, thanks for participating!"),
+          'storage'     => 'comment-count',
+          'points'      => 1,
+        ),
+        'comment-count-5' => array(
+          'title'       => t('Posted 5 comments!'),
+          'description' => t('Keep up the great work critiquing!'),
+          'storage'     => 'comment-count',
+          'points'      => 4,
+        ),
+        'comment-count-10' => array(
+          'title'       => t('Posted 10 comments!'),
+          'description' => t('Keep Going! We learn best when we learn together.'),
+          'storage'     => 'comment-count',
+          'points'      => 5,
+        ),
+        'comment-count-20' => array(
+          'title'       => t('Posted 20 comments!'),
+          'description' => t('Your a discussion powerhouse'),
+          'storage'     => 'comment-count',
+          'points'      => 10,
+        ),
+      ),
+    ),
+    // submission rewards
     'submission-creation' => array(
       'title' => t('Submissions'),
       'achievements' => array(
@@ -70,7 +70,7 @@ function cle_achievements_achievements_info() {
         ),
       ),
     ),
-		// rating rewards
+    // rating rewards
     'rating-usage' => array(
       'title' => t('Social rating'),
       'achievements' => array(
@@ -79,12 +79,12 @@ function cle_achievements_achievements_info() {
           'description' => t("Great work! This helps people get an emotional gauge of their work."),
           'points'      => 1,
         ),
-				'rating-usage-10' => array(
+        'rating-usage-10' => array(
           'title'       => t('Gave 10 social ratings'),
           'description' => t("Keep giving people social feedback about things you like"),
           'points'      => 1,
         ),
-				'rating-usage-20' => array(
+        'rating-usage-20' => array(
           'title'       => t('Gave 20 social ratings'),
           'description' => t("You are helping people gauge the emotional response of their work!"),
           'points'      => 1,
@@ -99,34 +99,34 @@ function cle_achievements_achievements_info() {
  * Implements hook_comment_insert().
  */
 function cle_achievements_comment_insert($comment) {
-	// make sure we don't award people for commenting on their own stuff
-	if ($node->uid != $comment->uid) {
-		// increment the comment count
-		$current_count = achievements_storage_get('comment-count', $comment->uid) + 1;
-		achievements_storage_set('comment-count', $current_count, $comment->uid);
-		// hit the mile-stones
-		foreach (array(1, 5, 10, 20) as $count) {
-			// when we hit a milestone unlock the achievement
-			if ($current_count == $count) {
-				achievements_unlocked('comment-count-' . $count, $comment->uid);
-			}
-		}
-	}
+  // make sure we don't award people for commenting on their own stuff
+  if ($node->uid != $comment->uid) {
+    // increment the comment count
+    $current_count = achievements_storage_get('comment-count', $comment->uid) + 1;
+    achievements_storage_set('comment-count', $current_count, $comment->uid);
+    // hit the mile-stones
+    foreach (array(1, 5, 10, 20) as $count) {
+      // when we hit a milestone unlock the achievement
+      if ($current_count == $count) {
+        achievements_unlocked('comment-count-' . $count, $comment->uid);
+      }
+    }
+  }
 }
 
 /**
  * Implements hook_node_insert().
  */
 function cle_achievements_node_insert($node) {
-	// we only reward submissions
-	if ($node->type == 'cle_submission') {
-  	$current_count = achievements_storage_get('submission-creation', $node->uid) + 1;
-  	achievements_storage_set('submission-creation', $current_count, $node->uid);
-		// reward the first achievement unlocked
-		if ($current_count == 1) {
+  // we only reward submissions
+  if ($node->type == 'cle_submission') {
+    $current_count = achievements_storage_get('submission-creation', $node->uid) + 1;
+    achievements_storage_set('submission-creation', $current_count, $node->uid);
+    // reward the first achievement unlocked
+    if ($current_count == 1) {
       achievements_unlocked('submission-creation-1', $node->uid);
     }
-	}
+  }
 }
 
 /**
@@ -150,25 +150,27 @@ function cle_achievements_node_insert($node) {
  */
 function cle_achievements_achievements_leaderboard_alter(&$leaderboard) {
   if ($leaderboard['type'] == 'first') {
-    //$leaderboard['render']['#caption'] = t('Congratulations to our first 10!');
+    // @todo alter the leaderboard for 1st place
   }
 }
 
 /**
  * Take actions before saving rate widget to the database.
  *
- * @param object $widget Widget object
- * @param array $values Values from $form_state['values']
+ * @param $widget
+ *   objcet of type Widget
+ * @param $values
+ *   Values from $form_state['values']
  */
 function cle_achievements_rate_widget_insert(&$widget, $values) {
-	// increment the comment count
-	$current_count = achievements_storage_get('rating-usage', $widget->uid) + 1;
-	achievements_storage_set('rating-usage', $current_count, $widget->uid);
-	// hit the mile-stones
-	foreach (array(1, 10, 20) as $count) {
-		// when we hit a milestone unlock the achievement
-		if ($current_count == $count) {
-			achievements_unlocked('rating-usage-' . $count, $widget->uid);
-		}
-	}
+  // increment the comment count
+  $current_count = achievements_storage_get('rating-usage', $widget->uid) + 1;
+  achievements_storage_set('rating-usage', $current_count, $widget->uid);
+  // hit the mile-stones
+  foreach (array(1, 10, 20) as $count) {
+    // when we hit a milestone unlock the achievement
+    if ($current_count == $count) {
+      achievements_unlocked('rating-usage-' . $count, $widget->uid);
+    }
+  }
 }

@@ -15,14 +15,14 @@ function cle_submission_views_default_views() {
   $view->description = 'Listing of a user\'s submissions';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'CLE My Submissions';
+  $view->human_name = 'CLE my submissions';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'CLE My Submissions';
+  $handler->display->display_options['title'] = 'CLE my submissions';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -266,7 +266,7 @@ function cle_submission_views_default_views() {
   $view->description = 'Blocks for media positioning';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'CLE Submission';
+  $view->human_name = 'CLE submission';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -340,7 +340,7 @@ function cle_submission_views_default_views() {
 
   $view = new view();
   $view->name = 'cle_submissions';
-  $view->description = 'Student Submissions';
+  $view->description = 'Student submissions';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Submissions';
@@ -550,7 +550,7 @@ function cle_submission_views_default_views() {
   $view->description = 'Submissions listing for an assignment';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Submissions Listing';
+  $view->human_name = 'Submissions listing';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */

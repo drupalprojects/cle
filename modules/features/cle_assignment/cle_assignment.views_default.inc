@@ -15,14 +15,14 @@ function cle_assignment_views_default_views() {
   $view->description = 'Edit assignment information in bulk';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Assignment Bulk Edit';
+  $view->human_name = 'Assignment bulk edit';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Manage Assignments';
+  $handler->display->display_options['title'] = 'Manage assignments';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'og_context';
   $handler->display->display_options['access']['perm'] = 'update group';

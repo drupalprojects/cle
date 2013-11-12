@@ -762,14 +762,14 @@ i',
   t('Body');
   t('Color');
   t('Comment');
-  t('Due Date');
-  t('Media Requirements');
+  t('Due date');
+  t('Media requirements');
   t('Number');
-  t('Public Assignments will be visible to everyone in the class.  This is useful when the assignment requires open critique and response.  Private Assignments will only be visible by you, the student submitting the work, and any support staff / TAs.');
+  t('Public assignments will be visible to everyone in the class.  This is useful when the assignment requires open critique and response.  Private Assignments will only be visible by you, the student submitting the work, and any support staff / TAs.');
   t('Section');
   t('Sub-number');
   t('This helps to identify assignments when viewing multiple');
-  t('This is used as the Assignment number which helps students with sorting of items as to what order to accomplish them in');
+  t('This is used as the assignment number which helps students with sorting of items as to what order to accomplish them in');
   t('Visibility');
 
   return $fields;

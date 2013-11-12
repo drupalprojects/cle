@@ -1,9 +1,10 @@
 <?php
-define('CLE_HELPER_GROUP_BUNDLE', 'section');
 /**
  * @file
  * Code for the CLE distribution.
  */
+// default node bundle / type for OG
+define('CLE_HELPER_GROUP_BUNDLE', 'section');
 
 /**
  * Implements hook_page_build().
@@ -13,19 +14,13 @@ function cle_helper_page_build(&$page) {
 }
 
 /**
- * Implements hook_lti_tool_provider_launch_alter().
- */
-function cle_helper_lti_tool_provider_launch_alter(&$launch_info, $account) {
-}
-
-/**
  * Implements hook_form_alter().
  */
 function cle_helper_form_alter(&$form, &$form_state, $form_id) {
   // if only part of one group select it automatically
   if (arg(0) == 'node' && arg(2) != 'edit' && ($form_id == 'cle_assignment_node_form' || $form_id == 'cle_submission_node_form')) {
     // if only 1 group, set to that value
-    if(count($form['og_group_ref']['und'][0]['default']['#options']) == 2) {
+    if (count($form['og_group_ref']['und'][0]['default']['#options']) == 2) {
       // flip around to get key associations
       $tmp = array_keys($form['og_group_ref']['und'][0]['default']['#options']);
       // array 0 is always '_none' so take the only other option
@@ -38,11 +33,11 @@ function cle_helper_form_alter(&$form, &$form_state, $form_id) {
     $form['og_group_ref']['und'][0]['default']['#title'] = t('Your Section');
     $form['og_group_ref']['und'][0]['default']['#description'] = t('Associate your submission with your course section.');
   }
-	// add quick link to create a new assignment when managing bulk assignment operations
-	if ($form_id == 'editableviews_entity_form_cle_assignment_bulk') {
-		$form['cle_add_new']['#markup'] = l(t('Create new Assignment'), 'node/add/cle-assignment', array('query' => array('og_group_ref' => arg(1))));
-	  $form['cle_add_new']['#weight'] = 100;
-	}
+  // add quick link to create a new assignment when managing bulk assignment operations
+  if ($form_id == 'editableviews_entity_form_cle_assignment_bulk') {
+    $form['cle_add_new']['#markup'] = l(t('Create new Assignment'), 'node/add/cle-assignment', array('query' => array('og_group_ref' => arg(1))));
+    $form['cle_add_new']['#weight'] = 100;
+  }
 }
 
 /**
@@ -62,7 +57,7 @@ function cle_helper_get_group_content_ids_alter(&$ids) {
   // select all nodes
   $query->entityCondition('entity_type', 'node')
   ->entityCondition('bundle', $content_types, 'IN')
-  // where the nid matches the 
+  // where the nid matches
   ->propertyCondition('nid', $id_key, 'IN')
   // run as user 1
   ->addMetaData('account', user_load(1));
@@ -97,10 +92,13 @@ function cle_helper_node_view($node, $view_mode, $langcode) {
 
 /**
  * Return links to create nodes that references the $node argument.
+ *
  * Implementation based on prepopulate_create_node_links sandbox
  *
- * @param stdClass $node
+ * @param $node
  *   The will node that will be referenced when the a node is added.
+ * @return $links
+ *   array of shortcut links for creating items.
  */
 function cle_helper_create_node_links($node) {
   // pull entity id from node passed
@@ -156,20 +154,20 @@ function cle_helper_create_node_links($node) {
           // this is very specific but allows for item in og to be set
           $query['og_group_ref'] = $node->og_group_ref['und'][0]['target_id'];
         }
-				if (isset($node->group_group) && $type_name == 'cle_submission') {
-				  // don't print this link
-				}
-				else {
-					// build the link array which will be rendered on return
-					$links[$type_name . '_' . $field_name] = array(
-						'title' => t('Create new @content_type', $target_content_type),
-						'href' => format_string('node/add/!content_type', $target_content_type_link),
-						'query' => $query + drupal_get_destination(),
-						'attributes' => array(
-							'title' => t('Create new @content_type', $target_content_type),
-						),
-					);
-				}
+        if (isset($node->group_group) && $type_name == 'cle_submission') {
+          // don't print this link
+        }
+        else {
+          // build the link array which will be rendered on return
+          $links[$type_name . '_' . $field_name] = array(
+            'title' => t('Create new @content_type', $target_content_type),
+            'href' => format_string('node/add/!content_type', $target_content_type_link),
+            'query' => $query + drupal_get_destination(),
+            'attributes' => array(
+              'title' => t('Create new @content_type', $target_content_type),
+            ),
+          );
+        }
       }
     }
   }

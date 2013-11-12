@@ -1,3 +1,7 @@
+/**
+ * @file
+ * wrapper for hover effect when mousing over items on main page.
+ */
 (function ($) {
   Drupal.behaviors.cleTileWrapper = {
     attach: function(context, settings) {

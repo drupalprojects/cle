@@ -45,7 +45,7 @@ function cle_submission_flexslider_default_presets() {
   $preset->disabled = FALSE; /* Edit this to true to make a default preset disabled initially */
   $preset->api_version = 1;
   $preset->name = 'cle_submission';
-  $preset->title = 'CLE Submission';
+  $preset->title = 'CLE submission';
   $preset->theme = 'classic';
   $preset->imagestyle_normal = 'cle_submission';
   $preset->options = array(

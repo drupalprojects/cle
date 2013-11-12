@@ -1,3 +1,7 @@
+/**
+ * @file
+ * same wrapper as submission_overview by for this page.
+ */
 (function ($) {
   Drupal.behaviors.cleTileWrapper = {
     attach: function(context, settings) {
