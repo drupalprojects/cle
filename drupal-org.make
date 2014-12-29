@@ -151,7 +151,7 @@ projects[regions][subdir] = "contrib"
 projects[restws][version] = "2.x-dev"
 projects[restws][subdir] = "contrib"
 
-projects[rules][version] = "2.2"
+projects[rules][version] = "2.7"
 projects[rules][subdir] = "contrib"
 
 projects[voting_rules][version] = "1.0-alpha1"
@@ -281,8 +281,10 @@ libraries[oauth][download][url] = "https://github.com/juampy72/OAuth-PHP/archive
 
 ; Patches
 ; fix false menu cloning
-projects[og_clone][patch][] = "http://drupal.org/files/og_clone-menu-cloning-none-1940982-1.patch"
+projects[og_clone][patch][] = "https://www.drupal.org/files/og_clone-menu-cloning-none-1940982-1.patch"
 ; allow for altering what can be cloned
-projects[og_clone][patch][] = "http://drupal.org/files/og_clone-item-id-alter-1941054-1.patch"
+projects[og_clone][patch][] = "https://www.drupal.org/files/og_clone-item-id-alter-1941054-1.patch"
 ; infinite scroll to work with masonry
-projects[views_infinite_scroll][patch][] = "http://drupal.org/files/views_infinite_scroll-1806628-13.patch"
+projects[views_infinite_scroll][patch][] = "https://www.drupal.org/files/views_infinite_scroll-1806628-13.patch"
+; rules is so stupid right now..
+projects[rules][patch][] = "https://www.drupal.org/files/issues/fix_errors_on_update-2090511-189.patch"
