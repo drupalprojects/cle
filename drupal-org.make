@@ -43,7 +43,7 @@ projects[entityreference_prepopulate][subdir] = "contrib"
 projects[flag][version] = "2.0"
 projects[flag][subdir] = "contrib"
 
-projects[features][version] = "2.0-rc3"
+projects[features][version] = "2.2"
 projects[features][subdir] = "contrib"
 
 projects[flexslider][version] = "1.0-rc3"
