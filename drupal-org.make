@@ -13,6 +13,9 @@ projects[masonry_views][subdir] = "contrib"
 projects[fastclick][version] = "1.2"
 projects[fastclick][subdir] = "contrib"
 
+projects[field_hidden][version] = "1.6"
+projects[field_hidden][subdir] = "contrib"
+
 projects[achievements][version] = "1.x-dev"
 projects[achievements][subdir] = "contrib"
 
