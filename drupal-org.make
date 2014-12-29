@@ -4,6 +4,12 @@ api = "2"
 
 ; Modules
 
+projects[features_override][version] = "2.0-rc2"
+projects[features_override][subdir] = "contrib"
+
+projects[masonry_views][version] = "1.0"
+projects[masonry_views][subdir] = "contrib"
+
 projects[fastclick][version] = "1.2"
 projects[fastclick][subdir] = "contrib"
 
