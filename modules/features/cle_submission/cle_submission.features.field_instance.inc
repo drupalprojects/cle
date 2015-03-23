@@ -86,7 +86,7 @@ function cle_submission_field_default_field_instances() {
         'settings' => array(
           'trim_length' => 600,
         ),
-        'type' => 'text_summary_or_trimmed',
+        'type' => 'text_default',
         'weight' => 0,
       ),
     ),
@@ -259,9 +259,12 @@ function cle_submission_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'lightbox2',
-        'settings' => array(),
-        'type' => 'lightbox2__lightbox__cle_square__large',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
         'weight' => 2,
       ),
       'teaser' => array(
