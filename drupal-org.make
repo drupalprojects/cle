@@ -262,3 +262,38 @@ projects[rate][version] = "1.7"
 projects[rate][subdir] = "contrib"
 projects[votingapi][version] = "2.12"
 projects[votingapi][subdir] = "contrib"
+; Other dependencies
+projects[masonry_views][version] = "1.0"
+projects[masonry_views][subdir] = "contrib"
+projects[rubric][version] = "1.x-dev"
+projects[rubric][subdir] = "contrib"
+projects[colorbox][version] = "2.8"
+projects[colorbox][subdir] = "contrib"
+projects[multiupload_imagefield_widget][version] = "1.3"
+projects[multiupload_imagefield_widget][subdir] = "contrib"
+projects[file_entity][version] = "2.x-dev"
+projects[file_entity][subdir] = "contrib"
+projects[select_or_other][version] = "2.22"
+projects[select_or_other][subdir] = "contrib"
+projects[eva][version] = "1.x-dev"
+projects[eva][subdir] = "contrib"
+projects[filefield_paths][version] = "1.0-beta4"
+projects[filefield_paths][subdir] = "contrib"
+projects[views_litepager][version] = "3.0"
+projects[views_litepager][subdir] = "contrib"
+
+
+; ColorBox
+libraries[colorbox][directory_name] = "colorbox"
+libraries[colorbox][type] = "library"
+libraries[colorbox][destination] = "libraries"
+libraries[colorbox][download][type] = "get"
+libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/archive/master.zip"
+
+; jQuery Colorpicker
+libraries[colorpicker][directory_name] = "colorpicker"
+libraries[colorpicker][type] = "library"
+libraries[colorpicker][destination] = "libraries"
+libraries[colorpicker][download][type] = "get"
+libraries[colorpicker][download][url] = "http://www.eyecon.ro/colorpicker/colorpicker.zip"
+
