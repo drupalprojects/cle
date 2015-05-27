@@ -251,7 +251,7 @@ projects[voting_rules][subdir] = "contrib"
 projects[masonry][version] = "2.x-dev"
 projects[masonry][subdir] = "contrib"
 ; Views
-projects[views_infinite_scroll][version] = "1.x-dev"
+projects[views_infinite_scroll][version] = "1.1"
 projects[views_infinite_scroll][subdir] = "contrib"
 projects[views_infinite_scroll][patch][] = "https://www.drupal.org/files/views_infinite_scroll-1806628-13.patch"
 
