@@ -279,7 +279,7 @@ projects[eva][version] = "1.x-dev"
 projects[eva][subdir] = "contrib"
 projects[filefield_paths][version] = "1.0-beta4"
 projects[filefield_paths][subdir] = "contrib"
-projects[views_litepager][version] = "3.0"
+projects[views_litepager][version] = "3.x-dev"
 projects[views_litepager][subdir] = "contrib"
 
 
