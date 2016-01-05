@@ -50,6 +50,7 @@ dependencies[] = prepopulate
 dependencies[] = menu_attributes
 dependencies[] = special_menu_items
 ; Other
+dependencies[] = navigation404
 dependencies[] = better_formats
 dependencies[] = chosen
 dependencies[] = defaultconfig
@@ -129,6 +130,7 @@ dependencies[] = cis_section
 ; Assessment entity
 dependencies[] = assessment_entity
 ; CLE
+dependencies[] = cle_require_profile
 dependencies[] = cle_helper
 dependencies[] = cle_achievements
 ; Fields

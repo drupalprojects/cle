@@ -776,7 +776,7 @@ function cle_submission_views_default_views() {
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = 'Action';
-  $handler->display->display_options['fields']['view_node']['text'] = 'Comment / Critique';
+  $handler->display->display_options['fields']['view_node']['text'] = 'Critique';
   /* Field: Content: Images */
   $handler->display->display_options['fields']['field_images']['id'] = 'field_images';
   $handler->display->display_options['fields']['field_images']['table'] = 'field_data_field_images';
@@ -1797,7 +1797,7 @@ function cle_submission_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Open Studio 2.0';
+  $handler->display->display_options['title'] = 'Open Studio';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
