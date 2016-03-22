@@ -76,7 +76,7 @@ function cle_submission_strongarm() {
         'custom_settings' => FALSE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -96,6 +96,9 @@ function cle_submission_strongarm() {
       'gradebook_viewer' => array(
         'custom_settings' => TRUE,
       ),
+      'critique' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -103,7 +106,36 @@ function cle_submission_strongarm() {
           'weight' => '1',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'critique_evas_entity_view_1' => array(
+          'critique' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '8',
+            'visible' => TRUE,
+          ),
+        ),
+        'critique_evas_entity_view_2' => array(
+          'critique' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__cle_submission'] = $strongarm;

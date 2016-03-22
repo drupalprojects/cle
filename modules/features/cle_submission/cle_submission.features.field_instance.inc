@@ -73,7 +73,21 @@ function cle_submission_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'critique' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -148,6 +162,15 @@ function cle_submission_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'critique' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'inline',
         'module' => 'entityreference',
@@ -156,6 +179,15 @@ function cle_submission_field_default_field_instances() {
         ),
         'type' => 'entityreference_label',
         'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
       ),
       'gradebook_viewer' => array(
         'label' => 'inline',
@@ -207,11 +239,23 @@ function cle_submission_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'critique' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'default' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 13,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -245,6 +289,15 @@ function cle_submission_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'critique' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'text' => 'Download [file:name]',
+        ),
+        'type' => 'file_download_link',
+        'weight' => 7,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'file_entity',
@@ -253,6 +306,15 @@ function cle_submission_field_default_field_instances() {
         ),
         'type' => 'file_download_link',
         'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'text' => 'Download [file:name]',
+        ),
+        'type' => 'file_download_link',
+        'weight' => 3,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -277,7 +339,7 @@ function cle_submission_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'file',
+      'module' => 'multiupload_filefield_widget',
       'settings' => array(
         'filefield_sources' => array(
           'filefield_sources' => array(),
@@ -295,7 +357,7 @@ function cle_submission_field_default_field_instances() {
         ),
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'file_generic',
+      'type' => 'file_mfw',
       'weight' => 5,
     ),
   );
@@ -306,6 +368,22 @@ function cle_submission_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'critique' => array(
+        'label' => 'hidden',
+        'module' => 'colorbox',
+        'settings' => array(
+          'colorbox_caption' => 'auto',
+          'colorbox_caption_custom' => '',
+          'colorbox_gallery' => 'field_page',
+          'colorbox_gallery_custom' => '',
+          'colorbox_image_style' => '',
+          'colorbox_multivalue_index' => NULL,
+          'colorbox_node_style' => 'cle_submission',
+          'colorbox_node_style_first' => 'cle_submission',
+        ),
+        'type' => 'colorbox',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'colorbox',
@@ -321,6 +399,22 @@ function cle_submission_field_default_field_instances() {
         ),
         'type' => 'colorbox',
         'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'colorbox',
+        'settings' => array(
+          'colorbox_caption' => 'auto',
+          'colorbox_caption_custom' => '',
+          'colorbox_gallery' => 'field_page',
+          'colorbox_gallery_custom' => '',
+          'colorbox_image_style' => '',
+          'colorbox_multivalue_index' => NULL,
+          'colorbox_node_style' => 'cle_submission',
+          'colorbox_node_style_first' => 'cle_submission',
+        ),
+        'type' => 'colorbox',
+        'weight' => 2,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -399,12 +493,26 @@ function cle_submission_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'critique' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 6,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 1,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -460,11 +568,23 @@ function cle_submission_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Current workflow state of this submission on its way to being graded and viewed by the student.',
     'display' => array(
+      'critique' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'default' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -499,6 +619,17 @@ function cle_submission_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'critique' => array(
+        'label' => 'hidden',
+        'module' => 'video_embed_field',
+        'settings' => array(
+          'description' => 1,
+          'description_position' => 'bottom',
+          'video_style' => 'cle_default',
+        ),
+        'type' => 'video_embed_field',
+        'weight' => 5,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'video_embed_field',
@@ -509,6 +640,17 @@ function cle_submission_field_default_field_instances() {
         ),
         'type' => 'video_embed_field',
         'weight' => 13,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'video_embed_field',
+        'settings' => array(
+          'description' => 1,
+          'description_position' => 'bottom',
+          'video_style' => 'cle_default',
+        ),
+        'type' => 'video_embed_field',
+        'weight' => 4,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -554,11 +696,23 @@ function cle_submission_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'critique' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'default' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'gradebook_viewer' => array(
         'label' => 'inline',

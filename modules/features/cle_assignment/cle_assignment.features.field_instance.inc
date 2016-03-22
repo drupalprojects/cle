@@ -126,7 +126,7 @@ function cle_assignment_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 7,
     ),
   );
 
@@ -187,7 +187,7 @@ function cle_assignment_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 14,
+      'weight' => 17,
     ),
   );
 
@@ -225,7 +225,90 @@ function cle_assignment_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 13,
+      'weight' => 16,
+    ),
+  );
+
+  // Exported field_instance: 'node-cle_assignment-field_cle_sub_type'
+  $field_instances['node-cle_assignment-field_cle_sub_type'] = array(
+    'bundle' => 'cle_assignment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Classify this type of submission. For example, is this a practice, activity, exercise, final assignment? This can then be filtered in lists to group submissions together.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 15,
+      ),
+      'gradebook_viewer' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cle_sub_type',
+    'label' => 'Submission type',
+    'required' => 1,
+    'settings' => array(
+      'authcache' => array(
+        'clients' => array(
+          'authcache_ajax' => array(
+            'status' => 1,
+            'weight' => 0,
+          ),
+        ),
+        'fallback' => 'cancel',
+        'lifespan' => 3600,
+        'perpage' => 0,
+        'peruser' => 1,
+        'status' => 0,
+      ),
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'plain_text' => 'plain_text',
+          'student_format' => 'student_format',
+          'textbook_editor' => 'textbook_editor',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+            'student_format' => array(
+              'weight' => 0,
+            ),
+            'textbook_editor' => array(
+              'weight' => -10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'select_or_other',
+      'settings' => array(
+        'apply_chosen' => 1,
+        'available_options' => 'Exercise',
+        'available_options_php' => '',
+        'markup_available_options_php' => '&lt;none&gt;',
+        'other' => 'Add assignment type',
+        'other_size' => 60,
+        'other_title' => 'New assignment type',
+        'other_unknown_defaults' => 'available',
+        'sort_options' => 1,
+      ),
+      'type' => 'select_or_other',
+      'weight' => 10,
     ),
   );
 
@@ -277,7 +360,7 @@ function cle_assignment_field_default_field_instances() {
       'module' => 'jquery_colorpicker',
       'settings' => array(),
       'type' => 'jquery_colorpicker',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -364,7 +447,7 @@ function cle_assignment_field_default_field_instances() {
         'year_range' => '-0:+1',
       ),
       'type' => 'date_select',
-      'weight' => 4,
+      'weight' => 12,
     ),
   );
 
@@ -527,7 +610,7 @@ Page',
         'sort_options' => 1,
       ),
       'type' => 'select_or_other',
-      'weight' => 10,
+      'weight' => 14,
     ),
   );
 
@@ -626,46 +709,7 @@ Drawing Exercise',
         'sort_options' => 1,
       ),
       'type' => 'select_or_other',
-      'weight' => 11,
-    ),
-  );
-
-  // Exported field_instance: 'node-cle_assignment-field_submission_type'
-  $field_instances['node-cle_assignment-field_submission_type'] = array(
-    'bundle' => 'cle_assignment',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 3,
-      ),
-      'gradebook_viewer' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_submission_type',
-    'label' => 'Submission type',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 15,
     ),
   );
 
@@ -719,13 +763,14 @@ Drawing Exercise',
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 3,
+      'weight' => 11,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Classify this type of submission. For example, is this a practice, activity, exercise, final assignment? This can then be filtered in lists to group submissions together.');
   t('Color');
   t('Comment');
   t('Due Date');

@@ -105,6 +105,7 @@ dependencies[] = views_bulk_operations
 dependencies[] = features
 dependencies[] = features_override
 ; ELMSLN Core
+dependencies[] = elmsln_api
 dependencies[] = cis_connector
 dependencies[] = cis_service_connection
 dependencies[] = cis_service_connection_ux
@@ -112,6 +113,7 @@ dependencies[] = cis_service_roles
 dependencies[] = cis_lmsless
 dependencies[] = cis_shortcodes
 dependencies[] = foundation_access_ux
+dependencies[] = elmsln_core
 ; ELMSLN Core - Performance
 dependencies[] = elmsln_authcache
 dependencies[] = elmsln_advagg
@@ -175,6 +177,7 @@ dependencies[] = cle_assignment
 dependencies[] = cle_section_assigmement
 dependencies[] = cle_submission
 dependencies[] = cle_submission_assessment
+dependencies[] = cle_critique
 dependencies[] = cle_gradebook
 dependencies[] = cle_gradebook_ux
 dependencies[] = cle_perms

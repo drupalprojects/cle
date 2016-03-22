@@ -1,14 +1,3 @@
 <?php
-/**
- * @file
- * cle_cis_ux.features.inc
- */
 
-/**
- * Implements hook_ctools_plugin_api().
- */
-function cle_cis_ux_ctools_plugin_api($module = NULL, $api = NULL) {
-  if ($module == "context" && $api == "context") {
-    return array("version" => "3");
-  }
-}
+// This file is deprecated and can be removed.
