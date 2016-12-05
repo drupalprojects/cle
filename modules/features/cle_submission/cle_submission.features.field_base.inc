@@ -10,7 +10,7 @@
 function cle_submission_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_assignment'
+  // Exported field_base: 'field_assignment'.
   $field_bases['field_assignment'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -47,7 +47,7 @@ function cle_submission_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_energy'
+  // Exported field_base: 'field_energy'.
   $field_bases['field_energy'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -69,7 +69,7 @@ function cle_submission_field_default_field_bases() {
     'type' => 'radioactivity',
   );
 
-  // Exported field_base: 'field_files'
+  // Exported field_base: 'field_files'.
   $field_bases['field_files'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -94,7 +94,7 @@ function cle_submission_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_images'
+  // Exported field_base: 'field_images'.
   $field_bases['field_images'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -118,7 +118,7 @@ function cle_submission_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_links'
+  // Exported field_base: 'field_links'.
   $field_bases['field_links'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -149,7 +149,7 @@ function cle_submission_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_submission_state'
+  // Exported field_base: 'field_submission_state'.
   $field_bases['field_submission_state'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -177,7 +177,29 @@ function cle_submission_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_video'
+  // Exported field_base: 'field_submission_text'.
+  $field_bases['field_submission_text'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_submission_text',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'cis_connector_access' => FALSE,
+      'cis_connector_disable' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_video'.
   $field_bases['field_video'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -193,40 +215,6 @@ function cle_submission_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'video_embed_field',
-  );
-
-  // Exported field_base: 'og_group_ref'
-  $field_bases['og_group_ref'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'og_group_ref',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'cis_connector_access' => FALSE,
-      'cis_connector_disable' => FALSE,
-      'handler' => 'og',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'og_behavior' => array(
-            'status' => TRUE,
-          ),
-        ),
-        'membership_type' => 'og_membership_type_default',
-        'target_bundles' => array(),
-      ),
-      'handler_submit' => 'Change handler',
-      'target_type' => 'node',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
   );
 
   return $field_bases;

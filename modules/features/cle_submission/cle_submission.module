@@ -12,6 +12,7 @@ include_once 'cle_submission.features.inc';
 function cle_submission_form_cle_submission_node_form_alter(&$form, &$form_state, $form_id) {
   // ensure this isn't loaded in an ajax callback
   if (arg(0) != 'system') {
+    unset($form['body']['und'][0]['summary']);
     // make sure that its not set to the needs work state
     // if it is then we need to allow anyone to see it so they could change it
     // back to ready for review but not the "in progress" since this is just
@@ -38,7 +39,7 @@ function cle_submission_form_cle_submission_node_form_alter(&$form, &$form_state
       // fields that we allow to be optionally hidden
       $hidden = array('field_images', 'field_video', 'body', 'field_links', 'field_files');
       // remove things we should allow to display
-      foreach ($assignment->field_media_requirements['und'] as $field) {
+      foreach ($assignment->field_assignment_artifacts['und'] as $field) {
         unset($hidden[array_search($field['value'], $hidden)]);
       }
       // hide things that shouldn't be visible based on requirements of assignment
@@ -89,7 +90,7 @@ function cle_submission_page_build(&$page) {
  */
 function cle_submission_node_access($node, $op, $account) {
   // allow for privacy value on the assignment to dictate who can see this
-  if (!_cis_connector_role_groupings(array('teacher', 'staff', 'webservice'), $account) && $op == 'view' && $node->type == 'cle_submission' && $node->uid != $account->uid) {
+  if ($op == 'view' && !_cis_connector_role_groupings(array('teacher', 'staff', 'webservice'), $account) && $node->type == 'cle_submission' && $node->uid != $account->uid) {
     // see if this assignment is private
     $assignment = node_load($node->field_assignment['und'][0]['target_id']);
     // boolean for visibility

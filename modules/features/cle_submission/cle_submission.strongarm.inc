@@ -105,6 +105,24 @@ function cle_submission_strongarm() {
         'title' => array(
           'weight' => '1',
         ),
+        'path' => array(
+          'weight' => '16',
+        ),
+        'hidden_nodes' => array(
+          'weight' => '15',
+        ),
+        'book' => array(
+          'weight' => '17',
+        ),
+        'options' => array(
+          'weight' => '18',
+        ),
+        'author' => array(
+          'weight' => '14',
+        ),
+        'revision_information' => array(
+          'weight' => '13',
+        ),
       ),
       'display' => array(
         'critique_evas_entity_view_1' => array(
@@ -117,7 +135,7 @@ function cle_submission_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '8',
+            'weight' => '4',
             'visible' => TRUE,
           ),
         ),
@@ -131,7 +149,7 @@ function cle_submission_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '7',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),

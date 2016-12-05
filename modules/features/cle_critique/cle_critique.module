@@ -4,8 +4,6 @@
  * Code for the CLE Critique feature.
  */
 
-include_once 'cle_critique.features.inc';
-
 /**
  * Implements hook_menu().
  */
@@ -30,7 +28,42 @@ function cle_critique_menu() {
     'file path' => drupal_get_path('module', 'node'),
   );
 
+  $items['api/v1/cle/critiques/random'] = array(
+    'page callback' => '_cle_critique_api_random_critique',
+    'access callback' => 'user_is_logged_in',
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
+}
+
+function _cle_critique_api_random_critique() {
+  $vars = array();
+  // get the query params
+  $params = drupal_get_query_parameters();
+  // check if there is an assingment
+  if (isset($params['assignment'])) {
+    $submission = _cle_critique_random($params['assignment']);
+    if ($submission) {
+      $vars['submission'] = $submission;
+    }
+    else {
+      $vars = array(
+        'status' => '204',
+        'detial' => 'No Submissions available'
+      );
+    }
+  }
+  else {
+    $vars = array(
+      'status' => '400',
+      'detial' => 'No Assignment specified'
+    );
+  }
+  drupal_add_http_header('Content-Type', 'application/json');
+
+  print drupal_json_output($vars);
+  drupal_exit();
 }
 
 /**
@@ -68,7 +101,14 @@ function _cle_critique_page_random_form($arg, &$form_state) {
     module_load_include('inc', 'node', 'node.pages');
     drupal_add_css(drupal_get_path('module', 'cle_critique') .'/css/cle_critique.css');
     // render their work
-    $submission = _cle_critique_random($arg);
+    // see if we already were handed input so we don't mess ourselves up by
+    // randomizing on save... like we once did. ugh.
+    if (isset($form_state['input']) && isset($form_state['input']['field_cle_crit_sub_ref'])) {
+      $submission = node_load($form_state['input']['field_cle_crit_sub_ref']['und']);
+    }
+    else {
+      $submission = _cle_critique_random($arg);
+    }
     if (!is_null($submission)) {
       // render the student submission for later
       $rendersubmission = node_view($submission, 'critique');
@@ -104,7 +144,7 @@ function _cle_critique_page_random_form($arg, &$form_state) {
       // render the form with our defaults passed in
       $form = drupal_get_form('cle_critique_node_form', $critnode);
       $form['work-to-critique'] = array(
-        '#markup' => '<div class="zf-2col-bricks"><div class="row"><div class="group-above-left medium-6 columns">' . render($rendersubmission) . '</div><div class="group-above-right medium-6 columns">',
+        '#markup' => '<div class="zf-2col-bricks"><div class="row"><div class="group-above-left m6 col">' . render($rendersubmission) . '</div><div class="group-above-right m6 col">',
         '#weight' => -100,
       );
       // need to emulate what node_form does by setting both of these
@@ -219,7 +259,7 @@ function cle_critique_cis_shortcode_render_alter(&$field, $entity, $type) {
   if ($type == 'node' && $entity->type == 'cle_assignment') {
     $properties = array(
       'rev' => CIS_SHORTCODES_API_REV,
-      'tool' => variable_get('install_profile', ''),
+      'tool' => elmsln_core_get_profile_key(),
       'render' => 'submit',
       'link' => 'cle/critique/critique-peer/' . $entity->nid . '?entity_iframe=true',
       'text' => t('Submit critique'),

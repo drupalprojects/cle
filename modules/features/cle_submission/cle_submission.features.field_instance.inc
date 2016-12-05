@@ -10,7 +10,8 @@
 function cle_submission_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_cle_submission-comment_body'
+  // Exported field_instance:
+  // 'comment-comment_node_cle_submission-comment_body'.
   $field_instances['comment-comment_node_cle_submission-comment_body'] = array(
     'bundle' => 'comment_node_cle_submission',
     'default_value' => NULL,
@@ -66,95 +67,7 @@ function cle_submission_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-cle_submission-body'
-  $field_instances['node-cle_submission-body'] = array(
-    'bundle' => 'cle_submission',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'critique' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'gradebook_viewer' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'plain_text' => 0,
-          'student_format' => 'student_format',
-          'textbook_editor' => 0,
-        ),
-        'allowed_formats_toggle' => 1,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-            'student_format' => array(
-              'weight' => 0,
-            ),
-            'textbook_editor' => array(
-              'weight' => -10,
-            ),
-          ),
-        ),
-      ),
-      'display_summary' => 1,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-cle_submission-field_assignment'
+  // Exported field_instance: 'node-cle_submission-field_assignment'.
   $field_instances['node-cle_submission-field_assignment'] = array(
     'bundle' => 'cle_submission',
     'default_value' => NULL,
@@ -187,7 +100,7 @@ function cle_submission_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 5,
+        'weight' => 1,
       ),
       'gradebook_viewer' => array(
         'label' => 'inline',
@@ -227,7 +140,7 @@ function cle_submission_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-cle_submission-field_energy'
+  // Exported field_instance: 'node-cle_submission-field_energy'.
   $field_instances['node-cle_submission-field_energy'] = array(
     'bundle' => 'cle_submission',
     'default_value' => array(
@@ -255,7 +168,7 @@ function cle_submission_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 15,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -283,7 +196,7 @@ function cle_submission_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-cle_submission-field_files'
+  // Exported field_instance: 'node-cle_submission-field_files'.
   $field_instances['node-cle_submission-field_files'] = array(
     'bundle' => 'cle_submission',
     'deleted' => 0,
@@ -314,7 +227,7 @@ function cle_submission_field_default_field_instances() {
           'text' => 'Download [file:name]',
         ),
         'type' => 'file_download_link',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -362,7 +275,7 @@ function cle_submission_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-cle_submission-field_images'
+  // Exported field_instance: 'node-cle_submission-field_images'.
   $field_instances['node-cle_submission-field_images'] = array(
     'bundle' => 'cle_submission',
     'deleted' => 0,
@@ -414,7 +327,7 @@ function cle_submission_field_default_field_instances() {
           'colorbox_node_style_first' => 'cle_submission',
         ),
         'type' => 'colorbox',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -486,7 +399,7 @@ function cle_submission_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-cle_submission-field_links'
+  // Exported field_instance: 'node-cle_submission-field_links'.
   $field_instances['node-cle_submission-field_links'] = array(
     'bundle' => 'cle_submission',
     'default_value' => NULL,
@@ -512,7 +425,7 @@ function cle_submission_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -557,7 +470,7 @@ function cle_submission_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-cle_submission-field_submission_state'
+  // Exported field_instance: 'node-cle_submission-field_submission_state'.
   $field_instances['node-cle_submission-field_submission_state'] = array(
     'bundle' => 'cle_submission',
     'default_value' => array(
@@ -584,7 +497,7 @@ function cle_submission_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 14,
       ),
       'gradebook_viewer' => array(
         'label' => 'hidden',
@@ -608,11 +521,86 @@ function cle_submission_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 12,
     ),
   );
 
-  // Exported field_instance: 'node-cle_submission-field_video'
+  // Exported field_instance: 'node-cle_submission-field_submission_text'.
+  $field_instances['node-cle_submission-field_submission_text'] = array(
+    'bundle' => 'cle_submission',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_submission_text',
+    'label' => 'Text',
+    'required' => 0,
+    'settings' => array(
+      'authcache' => array(
+        'clients' => array(
+          'authcache_ajax' => array(
+            'status' => 1,
+            'weight' => 0,
+          ),
+        ),
+        'fallback' => 'cancel',
+        'lifespan' => 3600,
+        'perpage' => 0,
+        'peruser' => 1,
+        'status' => 0,
+      ),
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'plain_text' => 0,
+          'student_format' => 0,
+          'textbook_editor' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'plain_text' => array(
+              'weight' => -48,
+            ),
+            'student_format' => array(
+              'weight' => -50,
+            ),
+            'textbook_editor' => array(
+              'weight' => -49,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-cle_submission-field_video'.
   $field_instances['node-cle_submission-field_video'] = array(
     'bundle' => 'cle_submission',
     'default_value' => NULL,
@@ -688,7 +676,7 @@ function cle_submission_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-cle_submission-og_group_ref'
+  // Exported field_instance: 'node-cle_submission-og_group_ref'.
   $field_instances['node-cle_submission-og_group_ref'] = array(
     'bundle' => 'cle_submission',
     'default_value' => NULL,
@@ -712,7 +700,7 @@ function cle_submission_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 13,
       ),
       'gradebook_viewer' => array(
         'label' => 'inline',
@@ -780,7 +768,6 @@ function cle_submission_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Assignment');
-  t('Body');
   t('Comment');
   t('Current workflow state of this submission on its way to being graded and viewed by the student.');
   t('Energy');
@@ -789,6 +776,7 @@ function cle_submission_field_default_field_instances() {
   t('Links');
   t('Section');
   t('State');
+  t('Text');
   t('Video');
 
   return $field_instances;
